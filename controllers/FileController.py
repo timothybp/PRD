@@ -3,17 +3,19 @@ from models.data.CareModel import CareModel
 from models.pheromone.PheromoneNode import PheromoneNode
 from models.pheromone.PheromoneEdge import PheromoneEdge
 
-
+# Cette classe est pour contrôler les fichier(la lecture et l'écriture)
 class FileController:
 
     def __init__(self):
-        self.buildingList = []
-        self.careList = []
-        self.distanceMatrix = [[]]
-        self.pheromoneNodeList = []
-        self.pheromoneEdgeMatrix = [[]]
+        self.buildingList = []  # La liste de bâtiments
+        self.careList = []  # La liste de cares
+        self.distanceMatrix = [[]]  # La matrice de distances entre chaque bâtiment et chaque care
+        self.pheromoneNodeList = [] # La liste de phéromone sur le nœud de bâtiment
+        self.pheromoneEdgeMatrix = [[]] # La matrice de phéromone sur l'arc entre le batiments et le case
 
+    # Cette méthode est pour lire les 3 fichiers : bâtiments, cares, distances
     def readFile(self):
+        # Lire le fichier de bâtiments et construire la liste de bâtiment et la liste de phéromone sur le nœud de bâtiment
         buildingCounter = 0
         with open('files/Rq22_51760B_TriCrOID_TriNSACr4.txt','rt') as buildings:
             for buildingLine in buildings:
@@ -28,7 +30,7 @@ class FileController:
                     pheromoneNode.tau = 0.5
                     self.pheromoneNodeList.append(pheromoneNode)
                 buildingCounter += 1
-
+        # Lire le fichier de cares et construire la liste de care
         careCounter = 0
         with open('files/Rq33_187CareMoveID188.txt','rt') as cares:
             for careLine in cares:
@@ -38,7 +40,7 @@ class FileController:
                     care.capacity = int(careLine.split('\t')[3])
                     self.careList.append(care)
                 careCounter += 1
-
+        # Lire le fichier de distances et construire la matrice de distances et la matrice de phéromone sur l'arc entre le batiments et le case
         distanceCounter = 0
         with open('files/LOD9679120_IdNet_NSACr3.txt','rt') as distances:
             i = 0
@@ -63,6 +65,7 @@ class FileController:
                 distanceCounter += 1
         print("finished reading files")
 
+    # Cette méthode est pour écrire la meilleure solution dans le fichier de sortie
     def writeFile(self,solution):
         with open('files/result.txt','wt') as result:
             i = 0
@@ -80,4 +83,3 @@ class FileController:
                     strToWrite += idCare + '\n'
                 i += 1
             result.write(strToWrite)
-

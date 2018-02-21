@@ -126,7 +126,7 @@ class AlgorithmController:
                 # Ajouter les solutions générées par chaque fourmis pendant une itération dans une liste
                 # Et calculer la quantité de chaque solution en utilisant g(x)/(1+f(x))
                 oneIterationSolutionList.append(antList[k].solution)
-                oneIterationQuantityList.append(self.objectiveFunctionG(antList[k].solution) / 1 + self.objectiveFunctionF(antList[k].solution))
+                oneIterationQuantityList.append(self.objectiveFunctionG(antList[k].solution) / (1 + self.objectiveFunctionF(antList[k].solution)))
                 k += 1
             # Chercher la meilleure solution pendant une itération
             oneIterationBestSolutionIndex = oneIterationQuantityList.index(max(oneIterationQuantityList))

@@ -1,4 +1,3 @@
-
 # Cette classe est le modèle de phéromone
 class PheromoneModel:
 

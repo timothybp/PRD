@@ -1,27 +1,30 @@
-from controllers.FileController import FileController
-from controllers.AlgorithmController import AlgorithmController
-from models.ant.AntModel import AntModel
 import time
+from controllers.InstanceController import InstanceController
+from controllers.FileController import FileController
+
 # C'est l'entrée du programme
 if __name__ == '__main__':
-    startTime = time.time()
-    nbAnts = 10  # Le nombre de fourmis est 1
-    i=0
-    antList = []
-    while i < nbAnts:
-        ant = AntModel()
-        antList.append(ant)
-        i += 1
+    programStartTime = time.time()
+    print('Programme Start...')
 
-    nbIteration = 10 # Le nombre de l'itération est 5
-    fc = FileController()
-    fc.readFile()
+    antAmount = 3
+    iterationTimes = 10
+    radius = 3000
 
-    rayon = 3000    # Le rayon initial est 3000m
-    ac = AlgorithmController(fc)
-    bestSolution = ac.allocateBuilding(nbIteration, antList, rayon)
+    buildingFileName = 'files/Rq22_51760B_TriCrOID_TriNSACr4.txt'
+    careFileName = 'files/Rq33_187CareMoveID188.txt'
+    distanceFileName = 'files/LOD9679120_IdNet_NSACr3.txt'
 
-    fc.writeFile(bestSolution)
-    endTime = time.time()
-    print(endTime - startTime)
 
+    instanceCtrl = InstanceController()
+    instanceCtrl.constructInstance(antAmount, buildingFileName,careFileName, distanceFileName)
+
+    print('Start to solve the problem...')
+    outFileName = 'files/result.txt'
+    solveProblemeStartTime = time.time()
+    instanceCtrl.solveProblem(iterationTimes, radius, outFileName)
+    solveProblemeEndTime = time.time()
+    print('Finish solving the problem, it takes %d s!\n\n' % (solveProblemeEndTime - solveProblemeStartTime))
+
+    programEndTime = time.time()
+    print('Finish executing program, it takes %d s!' % (programEndTime - programStartTime))

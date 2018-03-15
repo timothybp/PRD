@@ -1,4 +1,3 @@
-
 # Cette classe est modèle de centre d'accueil
 class CareModel:
 

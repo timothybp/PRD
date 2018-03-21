@@ -4,17 +4,15 @@ from models.ant.SolutionModel import SolutionModel
 import random
 import copy
 import matplotlib.pyplot as plt
-import numpy as np
 
 # Cette classe est pour contrôler l'algorithme
 class AlgorithmController:
 
     def __init__(self, instance):
         self.instance = instance
-        self.probabilityCtrl = ProbabilityController()
         self.bestSolution = SolutionModel()  # La liste de meilleure solution de chaque itération
 
-    def allocateBuilding(self, iterationTimes, radius):
+    def run(self, iterationTimes, careEffectRadius):
         distanceSortedBuildingIndexMatrix = self.sortBuildingIndexForEachCareInDistanceMatrix()
         bestSolutionForEachIterationList = []
         bestQualityOfSolutionForEachIterationList = []
@@ -26,16 +24,16 @@ class AlgorithmController:
             qualityOfSolutionForOneIterationList = []
 
             allocateStartTime = time.time()
-            k = 0
-            while k < len(self.instance.antList):
-                self.instance.antList[k].solution = SolutionModel()
+            for k,ant in enumerate(self.instance.antList):
+                ant.solution = SolutionModel()
                 copyDistanceSortedBuildingIndexMatrix = copy.deepcopy(distanceSortedBuildingIndexMatrix)
                 buildingToAllocateList = copy.deepcopy(self.instance.buildingList)
                 careToFillList = copy.deepcopy(self.instance.careList)
                 isBuildingSelectedList = [False] * len(buildingToAllocateList)
                 isCareFullList = [False] * len(careToFillList)
-                radiusList = [radius] * len(careToFillList)
-                self.instance.antList[k].solution.solutionArray = [-1] * len(buildingToAllocateList)
+                radiusList = [careEffectRadius] * len(careToFillList)
+                ant.solution.solutionArray = [-1] * len(buildingToAllocateList)
+                probabilityCtrl = ProbabilityController()
 
                 print("iteration %d, ant %d" % (iterationCounter + 1, k + 1))
                 print("Start to initialize candidate list...")
@@ -78,7 +76,7 @@ class AlgorithmController:
                                 if isBuildingSelectedList[i] == False:  #如果楼房i还没分配，就去计算概率
                                     eta = self.instance.pheromoneNodeList[i].eta
                                     tau = self.instance.pheromoneNodeList[i].tau
-                                    buildingProbability = self.probabilityCtrl.calculateProbability(eta, tau,
+                                    buildingProbability = probabilityCtrl.calculateProbability(eta, tau,
                                                                                              isBuildingSelectedList)
                                     buildingProbabilityList.append(buildingProbability)
                                     buildingIndexForProbabilityList.append(i)
@@ -90,7 +88,7 @@ class AlgorithmController:
 
                             print("batiment start")
                             print(buildingIndexForProbabilityList, buildingProbabilityList)
-                            buidlingToAllocateIndex = self.probabilityCtrl.generateProbability(buildingIndexForProbabilityList, buildingProbabilityList)
+                            buidlingToAllocateIndex = probabilityCtrl.generateProbability(buildingIndexForProbabilityList, buildingProbabilityList)
                             candidateList[careToFillIndexOfLastStep].remove(buidlingToAllocateIndex)
                             print("batiment end")
 
@@ -122,13 +120,13 @@ class AlgorithmController:
 
                     isAllCareFull, careToFillIndex = self.chooseCare(buidlingToAllocateIndex, buildingToAllocateList,
                                                                      careToFillList, isCareFullList,
-                                                                     self.instance.antList[k].solution)
+                                                                     ant.solution)
 
                     if careToFillIndex != -1:  # 如果本步选中了一个安置点
                         careToFillIndexOfLastStep = careToFillIndex
                         #更新信息素
                         rho = self.instance.pheromoneNodeList[buidlingToAllocateIndex].rho
-                        deltaTau = rho * self.objectiveFunctionG(self.instance.antList[k].solution)
+                        deltaTau = rho * self.objectiveFunctionG(ant.solution)
                         tau = self.instance.pheromoneNodeList[buidlingToAllocateIndex].tau
                         self.instance.pheromoneNodeList[buidlingToAllocateIndex].deltaTau = deltaTau
                         self.instance.pheromoneNodeList[buidlingToAllocateIndex].tau = (1 - rho) * tau + deltaTau
@@ -137,10 +135,9 @@ class AlgorithmController:
                         break
                     step += 1
 
-                self.instance.antList[k].solution.quality = self.objectiveFunctionG(self.instance.antList[k].solution) / (1 + self.objectiveFunctionF(self.instance.antList[k].solution))
-                qualityOfSolutionForOneIterationList.append(self.instance.antList[k].solution.quality)
-                solutionForOneIterationList.append(self.instance.antList[k].solution)
-                k += 1
+                ant.solution.quality = self.objectiveFunctionG(ant.solution) / (1 + self.objectiveFunctionF(ant.solution))
+                qualityOfSolutionForOneIterationList.append(ant.solution.quality)
+                solutionForOneIterationList.append(ant.solution)
 
             bestSolutionIndexForOneIteration = qualityOfSolutionForOneIterationList.index(max(qualityOfSolutionForOneIterationList))
             bestQualityOfSolutionForEachIterationList.append(max(qualityOfSolutionForOneIterationList))
@@ -158,6 +155,7 @@ class AlgorithmController:
         careProbabilityList = []
         careIndexForProbabilityList = []
         allowedCareLenght = len(careToFillList)
+        probabilityCtrl = ProbabilityController()
 
         #开始构建这个楼房与所有安置点的概率列表
         j = 0
@@ -166,13 +164,13 @@ class AlgorithmController:
             if self.instance.buildingList[buidlingToAllocateIndex].population <= self.instance.careList[j].capacity and isCareFullList[j] == False:
                 eta = self.instance.pheromoneEdgeMatrix[buidlingToAllocateIndex][j].eta
                 tau = self.instance.pheromoneEdgeMatrix[buidlingToAllocateIndex][j].tau
-                careProbability = self.probabilityCtrl.calculateProbability(eta, tau, isCareFullList)
+                careProbability = probabilityCtrl.calculateProbability(eta, tau, isCareFullList)
                 careProbabilityList.append(careProbability)
                 careIndexForProbabilityList.append(j)
             j += 1
 
         if len(careProbabilityList) != 0:   #如果存在安置点可以容纳该楼房
-            careToFillIndex = self.probabilityCtrl.generateProbability(careIndexForProbabilityList, careProbabilityList)
+            careToFillIndex = probabilityCtrl.generateProbability(careIndexForProbabilityList, careProbabilityList)
             solution.solutionArray[buidlingToAllocateIndex] = careToFillIndex
 
             #更新信息素
@@ -212,30 +210,51 @@ class AlgorithmController:
         print('Start to sort distance...')
         sortStartTime = time.time()
         copiedDistanceMatrix = copy.deepcopy(self.instance.distanceMatrix)
-        distanceSortedBuildingIndexMatrix = [[]]
-        maxValue = 99999
+        distanceSortedBuildingIndexMatrix = [list(range(0, len(self.instance.buildingList)))] * len(self.instance.careList)
 
-        j = 0
-        while j < len(self.instance.careList):
-            distanceColumn = [column[j] for column in copiedDistanceMatrix]
+        indexCare = 0
+        while indexCare < len(copiedDistanceMatrix[0]):
             sortOneColumnStartTime = time.time()
-            i = 0
-            while i < len(distanceColumn):
-                print("Travel %dth building for %dth care sort..." % (i+1, j+1))
-                minIndex = distanceColumn.index(min(distanceColumn))
-                distanceSortedBuildingIndexMatrix[j].append(minIndex)
-                distanceColumn[minIndex] = maxValue
-                i += 1
-            if j != len(self.instance.careList) - 1:
-                distanceSortedBuildingIndexMatrix.append([])
+            print("Sort buildings for %dth care..." % (indexCare + 1))
+            distanceColumn = [column[indexCare] for column in copiedDistanceMatrix]
+            distanceIndexRow = copy.deepcopy(distanceSortedBuildingIndexMatrix[indexCare])
+            distanceColumn, distanceIndexRow = self.merge_sort(distanceColumn, distanceIndexRow)
+            distanceSortedBuildingIndexMatrix[indexCare] = distanceIndexRow
             sortOneColumnEndTime = time.time()
-            print("Finish sorting for %dth care, it tackes %ds" % (j + 1, sortOneColumnEndTime-sortOneColumnStartTime))
-            j += 1
+            print("Finish sorting for %dth care, it tackes %ds" % (
+                indexCare + 1, sortOneColumnEndTime - sortOneColumnStartTime))
+            indexCare += 1
+
         sortEndTime = time.time()
         print('Finish solving the problem, it takes %d s!\n\n' % (sortEndTime - sortStartTime))
 
         return distanceSortedBuildingIndexMatrix
 
+    # 归并排序
+    def merge_sort(self, distanceColumn, distanceIndexRow):
+        if len(distanceColumn) <= 1:
+            return distanceColumn, distanceIndexRow
+        middle = int(len(distanceColumn) / 2)
+        left, leftIndex = self.merge_sort(distanceColumn[:middle], distanceIndexRow[:middle])
+        right, rightIndex = self.merge_sort(distanceColumn[middle:], distanceIndexRow[middle:])
+        i, j = 0, 0
+        result = []
+        resultIndex = []
+        while i < len(left) and j < len(right):
+            if left[i] <= right[j]:
+                result.append(left[i])
+                resultIndex.append(leftIndex[i])
+                i += 1
+            else:
+                result.append(right[j])
+                resultIndex.append(rightIndex[j])
+                j += 1
+        result += left[i:]
+        result += right[j:]
+        resultIndex += leftIndex[i:]
+        resultIndex += rightIndex[j:]
+
+        return result, resultIndex
 
     # Cette méthode est pour réaliser la fonction objective f(x)
     # Param : solution : Une solution
@@ -307,11 +326,9 @@ class AlgorithmController:
         return hx
 
     def calculateAverageSolutionQualityForEachIteration(self,qualityOfSolutionForOneIterationList):
-        i = 0
         sum = 0.00
-        while i < len(self.instance.antList):
-            sum += qualityOfSolutionForOneIterationList[i]
-            i += 1
+        for k in range(len(self.instance.antList)):
+            sum += qualityOfSolutionForOneIterationList[k]
         average = sum / len(self.instance.antList)
         return average
 
@@ -332,3 +349,4 @@ class AlgorithmController:
         plt.ylabel('Quality')
 
         plt.show()
+        plt.close()

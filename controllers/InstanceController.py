@@ -75,9 +75,9 @@ class InstanceController:
         constructInstanceEndTime = time.time()
         print('Finish constructing the instance, it takes %d s!\n\n' % (constructInstanceEndTime - constructInstanceStartTime))
 
-    def solveProblem(self,iterationTimes, radius, outFileName):
+    def solveProblem(self,iterationTimes, careEffectRadius, outFileName):
         algorithmCtrl = AlgorithmController(self.instance)
-        algorithmCtrl.allocateBuilding(iterationTimes, radius)
+        algorithmCtrl.run(iterationTimes, careEffectRadius)
         bestSolution = algorithmCtrl.bestSolution
         fileCtrl = FileController()
         fileCtrl.writeFile(outFileName, bestSolution, self.instance)

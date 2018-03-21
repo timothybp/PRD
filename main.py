@@ -9,7 +9,7 @@ if __name__ == '__main__':
 
     antAmount = 3
     iterationTimes = 10
-    radius = 3000
+    careEffectRadius = 3000
 
     buildingFileName = 'files/Rq22_51760B_TriCrOID_TriNSACr4.txt'
     careFileName = 'files/Rq33_187CareMoveID188.txt'
@@ -22,7 +22,7 @@ if __name__ == '__main__':
     print('Start to solve the problem...')
     outFileName = 'files/result.txt'
     solveProblemeStartTime = time.time()
-    instanceCtrl.solveProblem(iterationTimes, radius, outFileName)
+    instanceCtrl.solveProblem(iterationTimes, careEffectRadius, outFileName)
     solveProblemeEndTime = time.time()
     print('Finish solving the problem, it takes %d s!\n\n' % (solveProblemeEndTime - solveProblemeStartTime))
 

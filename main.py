@@ -7,8 +7,8 @@ if __name__ == '__main__':
     programStartTime = time.time()
     print('Programme Start...')
 
-    antAmount = 3
-    iterationTimes = 10
+    antQuantity = 20
+    iterationTimes = 50
     careEffectRadius = 3000
 
     buildingFileName = 'files/Rq22_51760B_TriCrOID_TriNSACr4.txt'
@@ -17,12 +17,12 @@ if __name__ == '__main__':
 
 
     instanceCtrl = InstanceController()
-    instanceCtrl.constructInstance(antAmount, buildingFileName,careFileName, distanceFileName)
+    instanceCtrl.constructInstance(antQuantity, buildingFileName,careFileName, distanceFileName)
 
     print('Start to solve the problem...')
-    outFileName = 'files/result.txt'
+    solutionFileName = 'files/bestSolution.txt'
     solveProblemeStartTime = time.time()
-    instanceCtrl.solveProblem(iterationTimes, careEffectRadius, outFileName)
+    instanceCtrl.solveProblem(iterationTimes, careEffectRadius, solutionFileName)
     solveProblemeEndTime = time.time()
     print('Finish solving the problem, it takes %d s!\n\n' % (solveProblemeEndTime - solveProblemeStartTime))
 

@@ -1,0 +1,2 @@
+ID_Iteration	Best_Quality	Average_Quality
+1	0.00026575548660874544	0.00026497499398632686

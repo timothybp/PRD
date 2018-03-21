@@ -3,7 +3,6 @@ from controllers.ProbabilityController import ProbabilityController
 from models.ant.SolutionModel import SolutionModel
 import random
 import copy
-import matplotlib.pyplot as plt
 
 # Cette classe est pour contrôler l'algorithme
 class AlgorithmController:
@@ -94,7 +93,7 @@ class AlgorithmController:
 
                         else:   #如果该安置点的候选列表为空，则扩大半径后重新填充该安置点的候选列表
                             #扩大该安置点的半径
-                            radiusList[careToFillIndexOfLastStep] += 500
+                            radiusList[careToFillIndexOfLastStep] += 1000
                             #更新该安置点的索引距离列表，去除已经分配的楼房的索引
                             sortedDistanceColumn = copyDistanceSortedBuildingIndexMatrix[careToFillIndexOfLastStep]
                             for index in sortedDistanceColumn:
@@ -149,7 +148,7 @@ class AlgorithmController:
 
         bestSolutionIndex = bestQualityOfSolutionForEachIterationList.index(max(bestQualityOfSolutionForEachIterationList))
         self.bestSolution = bestSolutionForEachIterationList[bestSolutionIndex]
-        self.drawFigure(bestQualityOfSolutionForEachIterationList, averageQualityOfSolutionForEachIterationList)
+        return bestQualityOfSolutionForEachIterationList, averageQualityOfSolutionForEachIterationList
 
     def chooseCare(self, buidlingToAllocateIndex, buildingToAllocateList, careToFillList, isCareFullList, solution):
         careProbabilityList = []
@@ -331,22 +330,3 @@ class AlgorithmController:
             sum += qualityOfSolutionForOneIterationList[k]
         average = sum / len(self.instance.antList)
         return average
-
-    def drawFigure(self,bestQualityOfSolutionForEachIterationList, averageQualityOfSolutionForEachIterationList):
-        iteration = len(bestQualityOfSolutionForEachIterationList)
-        print(iteration)
-        x = [x for x in range(0,iteration)]
-        y1 = bestQualityOfSolutionForEachIterationList
-        y2 = averageQualityOfSolutionForEachIterationList
-
-        plt.figure()
-        plt.plot(x, y1, 'b', linewidth=0.5, marker='*')
-        plt.plot(x, y2, 'r', linewidth=2, marker='+')
-
-        plt.fill_between(x, y1, y2, color='g', alpha=0.5)
-        plt.legend(['bestSolution', 'averageSolution'])
-        plt.xlabel('Iteration')
-        plt.ylabel('Quality')
-
-        plt.show()
-        plt.close()

@@ -1,24 +1,44 @@
 class FileController:
 
-    def readFile(self,filename, attachment):
-        contentList = []
+    def readBuildingFile(self,buildingFilename):
+        buildingContentList = []
         counter = 0
-        with open(filename, 'rt') as fileObj:
-            for line in fileObj:
+        with open(buildingFilename, 'rt') as buildings:
+            for building in buildings:
                 if counter != 0:
-                    contentList.append(line)
+                    buildingContentList.append(building)
                 counter += 1
-            if attachment == 'building':
-                print('Finish reading builidng file...')
-            if attachment == 'care':
-                print('Finish reading care file...')
-            if attachment == 'distance':
-                print('Finish reading distance file...')
-        return contentList
+        print('Finish reading builidng file...')
+        return buildingContentList
 
-    def writeFile(self, filename, bestSolution, instance):
+
+    def readCareFile(self, careFilename):
+        careContentList = []
+        counter = 0
+        with open(careFilename, 'rt') as cares:
+            for care in cares:
+                if counter != 0:
+                    careContentList.append(care)
+                counter += 1
+        print('Finish reading care file...')
+        return careContentList
+
+
+    def readDistanceFile(self, distanceFilename):
+        distanceContentList = []
+        counter = 0
+        with open(distanceFilename, 'rt') as distances:
+            for distance in distances:
+                if counter != 0:
+                    distanceContentList.append(distance)
+                counter += 1
+        print('Finish reading distance file...')
+        return distanceContentList
+
+
+    def writeSolutionFile(self, solutionFilename, bestSolution, instance):
         solution = bestSolution.solutionArray
-        with open(filename, 'wt') as result:
+        with open(solutionFilename, 'wt') as result:
             i = 0
             strToWrite = 'ID_BAT\tID_CARE\n'
             while i < len(solution):
@@ -35,3 +55,17 @@ class FileController:
                 i += 1
             result.write(strToWrite)
 
+
+    def writeQualityFile(self, bestQualityOfEachIterationList, averageQualityOfEachIterationList):
+        with open('files/quality.txt', 'wt') as quality:
+            i = 0
+            strToWrite = 'ID_Iteration\tBest_Quality\tAverage_Quality\n'
+            while i < len(bestQualityOfEachIterationList):
+                if i != len(bestQualityOfEachIterationList) - 1:
+                    strToWrite += str(i+1) + '\t' + str(bestQualityOfEachIterationList[i]) + '\t' + \
+                                  str(averageQualityOfEachIterationList[i]) + '\n'
+                else:
+                    strToWrite += str(i + 1) + '\t' + str(bestQualityOfEachIterationList[i]) + '\t' + \
+                                  str(averageQualityOfEachIterationList[i])
+                i += 1
+            quality.write(strToWrite)

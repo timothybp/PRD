@@ -14,14 +14,14 @@ class InstanceController:
         self.instance = InstanceModel()
 
 
-    def constructInstance(self,antAmount, buildingFileName,careFileName, distanceFileName):
+    def constructInstance(self,antQuantity, buildingFileName,careFileName, distanceFileName):
 
         fileCtrl = FileController()
         print('Start to read files...')
         readingFilesStartTime = time.time()
-        buildingFileContent = fileCtrl.readFile(buildingFileName, 'building')
-        careFileContent = fileCtrl.readFile(careFileName, 'care')
-        distanceFileContent = fileCtrl.readFile(distanceFileName, 'distance')
+        buildingFileContent = fileCtrl.readBuildingFile(buildingFileName)
+        careFileContent = fileCtrl.readCareFile(careFileName)
+        distanceFileContent = fileCtrl.readDistanceFile(distanceFileName)
         readingFilesEndTime = time.time()
         print('Finish reading all files, it takes %d s!\n\n' % (readingFilesEndTime - readingFilesStartTime))
 
@@ -35,8 +35,8 @@ class InstanceController:
 
             pheromoneNode = PheromoneNode()
             pheromoneNode.eta = float(buildingLine.split('\t')[3])
-            pheromoneNode.rho = 0.25
-            pheromoneNode.tau = 0.5
+            pheromoneNode.rho = 0.000001
+            pheromoneNode.tau = 0.8
             self.instance.pheromoneNodeList.append(pheromoneNode)
 
         for careLine in careFileContent:
@@ -55,8 +55,8 @@ class InstanceController:
                 pheromoneEdge.eta = 1 / float(distanceLine.split('\t')[2])
             else:
                 pheromoneEdge.eta = 0
-            pheromoneEdge.rho = 0.5
-            pheromoneEdge.tau = 0.5
+            pheromoneEdge.rho = 0.1
+            pheromoneEdge.tau = 0.9
             self.instance.pheromoneEdgeMatrix[i].append(pheromoneEdge)
             j += 1
 
@@ -67,7 +67,7 @@ class InstanceController:
                 j = 0
 
         k = 0
-        while(k < antAmount):
+        while(k < antQuantity):
             ant = AntModel()
             self.instance.antList.append(ant)
             k += 1
@@ -75,9 +75,11 @@ class InstanceController:
         constructInstanceEndTime = time.time()
         print('Finish constructing the instance, it takes %d s!\n\n' % (constructInstanceEndTime - constructInstanceStartTime))
 
-    def solveProblem(self,iterationTimes, careEffectRadius, outFileName):
+    def solveProblem(self,iterationTimes, careEffectRadius, solutionFileName):
         algorithmCtrl = AlgorithmController(self.instance)
-        algorithmCtrl.run(iterationTimes, careEffectRadius)
+        bestQualityOfSolutionForEachIterationList, averageQualityOfSolutionForEachIterationList = \
+            algorithmCtrl.run(iterationTimes, careEffectRadius)
         bestSolution = algorithmCtrl.bestSolution
         fileCtrl = FileController()
-        fileCtrl.writeFile(outFileName, bestSolution, self.instance)
+        fileCtrl.writeSolutionFile(solutionFileName, bestSolution, self.instance)
+        fileCtrl.writeQualityFile(bestQualityOfSolutionForEachIterationList, averageQualityOfSolutionForEachIterationList)

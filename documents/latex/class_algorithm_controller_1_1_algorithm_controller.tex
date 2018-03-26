@@ -1,0 +1,173 @@
+\hypertarget{class_algorithm_controller_1_1_algorithm_controller}{}\section{Algorithm\+Controller.\+Algorithm\+Controller Class Reference}
+\label{class_algorithm_controller_1_1_algorithm_controller}\index{Algorithm\+Controller.\+Algorithm\+Controller@{Algorithm\+Controller.\+Algorithm\+Controller}}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+def \mbox{\hyperlink{class_algorithm_controller_1_1_algorithm_controller_a2f8217779ecd4b8ffbcb6869a8abf5ef}{\+\_\+\+\_\+init\+\_\+\+\_\+}} (self, instance, care\+Effect\+Radius)
+\item 
+def \mbox{\hyperlink{class_algorithm_controller_1_1_algorithm_controller_a16c94d71907fe272accefc3b11d202ef}{run}} (self, iteration\+Times)
+\item 
+def \mbox{\hyperlink{class_algorithm_controller_1_1_algorithm_controller_aceaf2f248880e85bebd1d1c5a3ee50e2}{allocate\+Building}} (self, ant, copy\+Distance\+Sorted\+Building\+Index\+Matrix, solution\+For\+One\+Iteration\+List, quality\+Of\+Solution\+For\+One\+Iteration\+List)
+\item 
+def \mbox{\hyperlink{class_algorithm_controller_1_1_algorithm_controller_a3e4df24f596b73789fe10ef001dc4fd7}{choose\+Care}} (self, buidling\+To\+Allocate\+Index, building\+To\+Allocate\+List, care\+To\+Fill\+List, is\+Care\+Full\+List, solution)
+\item 
+def \mbox{\hyperlink{class_algorithm_controller_1_1_algorithm_controller_a6be8ad6c0ed5d3733cc3678f4e73a6f5}{sort\+Building\+Index\+For\+Each\+Care\+In\+Distance\+Matrix}} (self)
+\item 
+def \mbox{\hyperlink{class_algorithm_controller_1_1_algorithm_controller_a93353daa1fde6df34d6b22af6a773610}{merge\+\_\+sort}} (self, distance\+List, distance\+Index\+List)
+\item 
+def \mbox{\hyperlink{class_algorithm_controller_1_1_algorithm_controller_a93b60c2a1787e8d5c3f940ddd6d051e9}{objective\+FunctionF}} (self, solution)
+\item 
+def \mbox{\hyperlink{class_algorithm_controller_1_1_algorithm_controller_a96414bd12515fbd19bc103cbc0b9cdcb}{objective\+FunctionG}} (self, solution)
+\item 
+def \mbox{\hyperlink{class_algorithm_controller_1_1_algorithm_controller_abe539c495b1f651be7198f43c7640ce0}{objective\+FunctionH}} (self, solution)
+\item 
+def \mbox{\hyperlink{class_algorithm_controller_1_1_algorithm_controller_a6b570c9ebad1e6a937e74490fab6a8a9}{calculate\+Average\+Solution\+Quality\+For\+Each\+Iteration}} (self, quality\+Of\+Solution\+For\+One\+Iteration\+List)
+\end{DoxyCompactItemize}
+\subsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_algorithm_controller_1_1_algorithm_controller_ae5b0382b72120d0b7412baa3e59b2b82}\label{class_algorithm_controller_1_1_algorithm_controller_ae5b0382b72120d0b7412baa3e59b2b82}} 
+{\bfseries instance}
+\item 
+\mbox{\Hypertarget{class_algorithm_controller_1_1_algorithm_controller_a562b9b093fd7ff0cfedb6b7a814e92f8}\label{class_algorithm_controller_1_1_algorithm_controller_a562b9b093fd7ff0cfedb6b7a814e92f8}} 
+{\bfseries best\+Solution}
+\item 
+\mbox{\Hypertarget{class_algorithm_controller_1_1_algorithm_controller_a10c4b05a70d8fea5c86e4dd936f57914}\label{class_algorithm_controller_1_1_algorithm_controller_a10c4b05a70d8fea5c86e4dd936f57914}} 
+{\bfseries care\+Effect\+Radius}
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+\begin{DoxyVerb}Description: cette classe est le controleur d'algorthime, qui réalise à chercher la meilleur solution d'affection
+Attributs:
+    instance: (l'objet de la classe InstanceModel) l'instance préparée par la classe InstanceControleur,
+                y compris la liste de bâtiments，la liste de cares, la liste de phéromones sur les nœuds de bâtiment,
+                la matrice de phéromones sur les arcs entre le bâtiment et le care，la liste de fourmis
+    bestSolution: (l'objet de la classe SolutionModel) la meilleure solution trouvé finalement
+    careEffectRadius: (int) le rayon d'attraction initial de circle dont le centre est chaque care
+\end{DoxyVerb}
+ 
+
+\subsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_algorithm_controller_1_1_algorithm_controller_a2f8217779ecd4b8ffbcb6869a8abf5ef}\label{class_algorithm_controller_1_1_algorithm_controller_a2f8217779ecd4b8ffbcb6869a8abf5ef}} 
+\index{Algorithm\+Controller\+::\+Algorithm\+Controller@{Algorithm\+Controller\+::\+Algorithm\+Controller}!\+\_\+\+\_\+init\+\_\+\+\_\+@{\+\_\+\+\_\+init\+\_\+\+\_\+}}
+\index{\+\_\+\+\_\+init\+\_\+\+\_\+@{\+\_\+\+\_\+init\+\_\+\+\_\+}!Algorithm\+Controller\+::\+Algorithm\+Controller@{Algorithm\+Controller\+::\+Algorithm\+Controller}}
+\subsubsection{\texorpdfstring{\+\_\+\+\_\+init\+\_\+\+\_\+()}{\_\_init\_\_()}}
+{\footnotesize\ttfamily def Algorithm\+Controller.\+Algorithm\+Controller.\+\_\+\+\_\+init\+\_\+\+\_\+ (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{instance,  }\item[{}]{care\+Effect\+Radius }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Description: cette méthode est le constructeur de la classe AlgorithmeControlleur
+:param instance: (l'objet de la classe InstanceModel) l'instance de programme,
+            qui est préparée par la classe InstanceControleur
+:param careEffectRadius: (int) le rayon d'attraction initial de chaque care, qui est définit par l'utilisateur
+                    dans le script main.py
+\end{DoxyVerb}
+ 
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{class_algorithm_controller_1_1_algorithm_controller_aceaf2f248880e85bebd1d1c5a3ee50e2}\label{class_algorithm_controller_1_1_algorithm_controller_aceaf2f248880e85bebd1d1c5a3ee50e2}} 
+\index{Algorithm\+Controller\+::\+Algorithm\+Controller@{Algorithm\+Controller\+::\+Algorithm\+Controller}!allocate\+Building@{allocate\+Building}}
+\index{allocate\+Building@{allocate\+Building}!Algorithm\+Controller\+::\+Algorithm\+Controller@{Algorithm\+Controller\+::\+Algorithm\+Controller}}
+\subsubsection{\texorpdfstring{allocate\+Building()}{allocateBuilding()}}
+{\footnotesize\ttfamily def Algorithm\+Controller.\+Algorithm\+Controller.\+allocate\+Building (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{ant,  }\item[{}]{copy\+Distance\+Sorted\+Building\+Index\+Matrix,  }\item[{}]{solution\+For\+One\+Iteration\+List,  }\item[{}]{quality\+Of\+Solution\+For\+One\+Iteration\+List }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Description: cette méthode est pour sélectionner les bâtiments à affecter
+:param ant: (l'objet de la classe AntModel) un fourmi qui va chercher sa solution
+:param copyDistanceSortedBuildingIndexMatrix: (int[][]) la matrice copièe d'indices de bâtiment référée la matrice de distance
+:param solutionForOneIterationList: (SolutionModel[]) la liste de solutions pour une itération
+:param qualityOfSolutionForOneIterationList: (float[]) la liste de qualités de solution pour une itération
+:return: rien
+\end{DoxyVerb}
+ \mbox{\Hypertarget{class_algorithm_controller_1_1_algorithm_controller_a6b570c9ebad1e6a937e74490fab6a8a9}\label{class_algorithm_controller_1_1_algorithm_controller_a6b570c9ebad1e6a937e74490fab6a8a9}} 
+\index{Algorithm\+Controller\+::\+Algorithm\+Controller@{Algorithm\+Controller\+::\+Algorithm\+Controller}!calculate\+Average\+Solution\+Quality\+For\+Each\+Iteration@{calculate\+Average\+Solution\+Quality\+For\+Each\+Iteration}}
+\index{calculate\+Average\+Solution\+Quality\+For\+Each\+Iteration@{calculate\+Average\+Solution\+Quality\+For\+Each\+Iteration}!Algorithm\+Controller\+::\+Algorithm\+Controller@{Algorithm\+Controller\+::\+Algorithm\+Controller}}
+\subsubsection{\texorpdfstring{calculate\+Average\+Solution\+Quality\+For\+Each\+Iteration()}{calculateAverageSolutionQualityForEachIteration()}}
+{\footnotesize\ttfamily def Algorithm\+Controller.\+Algorithm\+Controller.\+calculate\+Average\+Solution\+Quality\+For\+Each\+Iteration (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{quality\+Of\+Solution\+For\+One\+Iteration\+List }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Description: cette méthode est pour calculer la qualité moyenne des solutions générées par chaque fourmi dans une itération
+:param qualityOfSolutionForOneIterationList: (float[]) la liste de qualités de chaque solution
+:return: average: (float) la qualité moyenne des solutions
+\end{DoxyVerb}
+ \mbox{\Hypertarget{class_algorithm_controller_1_1_algorithm_controller_a3e4df24f596b73789fe10ef001dc4fd7}\label{class_algorithm_controller_1_1_algorithm_controller_a3e4df24f596b73789fe10ef001dc4fd7}} 
+\index{Algorithm\+Controller\+::\+Algorithm\+Controller@{Algorithm\+Controller\+::\+Algorithm\+Controller}!choose\+Care@{choose\+Care}}
+\index{choose\+Care@{choose\+Care}!Algorithm\+Controller\+::\+Algorithm\+Controller@{Algorithm\+Controller\+::\+Algorithm\+Controller}}
+\subsubsection{\texorpdfstring{choose\+Care()}{chooseCare()}}
+{\footnotesize\ttfamily def Algorithm\+Controller.\+Algorithm\+Controller.\+choose\+Care (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{buidling\+To\+Allocate\+Index,  }\item[{}]{building\+To\+Allocate\+List,  }\item[{}]{care\+To\+Fill\+List,  }\item[{}]{is\+Care\+Full\+List,  }\item[{}]{solution }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Description: cette méthode est pour sélectionner les cares à remplir
+:param buidlingToAllocateIndex: (int) l'indice de bâtiment sélectionné
+:param buildingToAllocateList: (BuildingModel[]) la liste de bâtiments
+:param careToFillList: (CareModel[]) la liste de care
+:param isCareFullList: (Boolean[]) la liste qui marque si le care est plein
+:param solution: (l'objet de la classe SolutionModel) la solution
+:return: (boolean) une variable boolean qui signifie si tous les cares sont pleins
+:return: careToFillIndex: (int) l'indice de care sélectionné
+\end{DoxyVerb}
+ \mbox{\Hypertarget{class_algorithm_controller_1_1_algorithm_controller_a93353daa1fde6df34d6b22af6a773610}\label{class_algorithm_controller_1_1_algorithm_controller_a93353daa1fde6df34d6b22af6a773610}} 
+\index{Algorithm\+Controller\+::\+Algorithm\+Controller@{Algorithm\+Controller\+::\+Algorithm\+Controller}!merge\+\_\+sort@{merge\+\_\+sort}}
+\index{merge\+\_\+sort@{merge\+\_\+sort}!Algorithm\+Controller\+::\+Algorithm\+Controller@{Algorithm\+Controller\+::\+Algorithm\+Controller}}
+\subsubsection{\texorpdfstring{merge\+\_\+sort()}{merge\_sort()}}
+{\footnotesize\ttfamily def Algorithm\+Controller.\+Algorithm\+Controller.\+merge\+\_\+sort (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{distance\+List,  }\item[{}]{distance\+Index\+List }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Description: cette méthode est pour trier une liste d'indice de bâtiments en référant la liste de distance
+        avec la trie par fusion
+:param distanceList: (float[][]) la liste de distance à référer
+:param distanceIndexList: (int[][]) la liste d'indice de bâtiment à trier
+:return: result: (float[][]) la liste de distance triée
+:return: resultIndex: (int[][]) la liste d'indice de bâtiment triée
+\end{DoxyVerb}
+ \mbox{\Hypertarget{class_algorithm_controller_1_1_algorithm_controller_a93b60c2a1787e8d5c3f940ddd6d051e9}\label{class_algorithm_controller_1_1_algorithm_controller_a93b60c2a1787e8d5c3f940ddd6d051e9}} 
+\index{Algorithm\+Controller\+::\+Algorithm\+Controller@{Algorithm\+Controller\+::\+Algorithm\+Controller}!objective\+FunctionF@{objective\+FunctionF}}
+\index{objective\+FunctionF@{objective\+FunctionF}!Algorithm\+Controller\+::\+Algorithm\+Controller@{Algorithm\+Controller\+::\+Algorithm\+Controller}}
+\subsubsection{\texorpdfstring{objective\+Function\+F()}{objectiveFunctionF()}}
+{\footnotesize\ttfamily def Algorithm\+Controller.\+Algorithm\+Controller.\+objective\+FunctionF (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{solution }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Description: cette méthode est pour réaliser la fonction objective f(x)
+:param solution: (l'object de la classe SolutionModel) une solution
+:return: fx: (float) la valeur calculée de f(x)
+\end{DoxyVerb}
+ \mbox{\Hypertarget{class_algorithm_controller_1_1_algorithm_controller_a96414bd12515fbd19bc103cbc0b9cdcb}\label{class_algorithm_controller_1_1_algorithm_controller_a96414bd12515fbd19bc103cbc0b9cdcb}} 
+\index{Algorithm\+Controller\+::\+Algorithm\+Controller@{Algorithm\+Controller\+::\+Algorithm\+Controller}!objective\+FunctionG@{objective\+FunctionG}}
+\index{objective\+FunctionG@{objective\+FunctionG}!Algorithm\+Controller\+::\+Algorithm\+Controller@{Algorithm\+Controller\+::\+Algorithm\+Controller}}
+\subsubsection{\texorpdfstring{objective\+Function\+G()}{objectiveFunctionG()}}
+{\footnotesize\ttfamily def Algorithm\+Controller.\+Algorithm\+Controller.\+objective\+FunctionG (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{solution }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Description: cette méthode est pour réaliser la fonction objective g(x)
+:param solution: (l'object de la classe SolutionModel) une solution
+:return: gx: (float) la valeur calculée de g(x)
+\end{DoxyVerb}
+ \mbox{\Hypertarget{class_algorithm_controller_1_1_algorithm_controller_abe539c495b1f651be7198f43c7640ce0}\label{class_algorithm_controller_1_1_algorithm_controller_abe539c495b1f651be7198f43c7640ce0}} 
+\index{Algorithm\+Controller\+::\+Algorithm\+Controller@{Algorithm\+Controller\+::\+Algorithm\+Controller}!objective\+FunctionH@{objective\+FunctionH}}
+\index{objective\+FunctionH@{objective\+FunctionH}!Algorithm\+Controller\+::\+Algorithm\+Controller@{Algorithm\+Controller\+::\+Algorithm\+Controller}}
+\subsubsection{\texorpdfstring{objective\+Function\+H()}{objectiveFunctionH()}}
+{\footnotesize\ttfamily def Algorithm\+Controller.\+Algorithm\+Controller.\+objective\+FunctionH (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{solution }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Description: cette méthode est pour réaliser la fonction objective h(x)
+:param solution: (l'object de la classe SolutionModel) une solution
+:return: h(x): (float) la valeur calculée de h(x)
+\end{DoxyVerb}
+ \mbox{\Hypertarget{class_algorithm_controller_1_1_algorithm_controller_a16c94d71907fe272accefc3b11d202ef}\label{class_algorithm_controller_1_1_algorithm_controller_a16c94d71907fe272accefc3b11d202ef}} 
+\index{Algorithm\+Controller\+::\+Algorithm\+Controller@{Algorithm\+Controller\+::\+Algorithm\+Controller}!run@{run}}
+\index{run@{run}!Algorithm\+Controller\+::\+Algorithm\+Controller@{Algorithm\+Controller\+::\+Algorithm\+Controller}}
+\subsubsection{\texorpdfstring{run()}{run()}}
+{\footnotesize\ttfamily def Algorithm\+Controller.\+Algorithm\+Controller.\+run (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{iteration\+Times }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Description: cette méthode est l'entrèe de l'algorithme, et synthétise les solutions génèrèe par chaque fourmi
+        dans chaque itération, et obtenir la meilleure solution
+:param iterationTimes: (int) la fois d'itérations
+:return bestQualityOfSolutionForEachIterationList: (float[]) la liste de qualités de meilleure solution de chaque itération
+:return averageQualityOfSolutionForEachIterationList：(SolutionModel[]) la liste de meilleure solution de chaque itération
+\end{DoxyVerb}
+ \mbox{\Hypertarget{class_algorithm_controller_1_1_algorithm_controller_a6be8ad6c0ed5d3733cc3678f4e73a6f5}\label{class_algorithm_controller_1_1_algorithm_controller_a6be8ad6c0ed5d3733cc3678f4e73a6f5}} 
+\index{Algorithm\+Controller\+::\+Algorithm\+Controller@{Algorithm\+Controller\+::\+Algorithm\+Controller}!sort\+Building\+Index\+For\+Each\+Care\+In\+Distance\+Matrix@{sort\+Building\+Index\+For\+Each\+Care\+In\+Distance\+Matrix}}
+\index{sort\+Building\+Index\+For\+Each\+Care\+In\+Distance\+Matrix@{sort\+Building\+Index\+For\+Each\+Care\+In\+Distance\+Matrix}!Algorithm\+Controller\+::\+Algorithm\+Controller@{Algorithm\+Controller\+::\+Algorithm\+Controller}}
+\subsubsection{\texorpdfstring{sort\+Building\+Index\+For\+Each\+Care\+In\+Distance\+Matrix()}{sortBuildingIndexForEachCareInDistanceMatrix()}}
+{\footnotesize\ttfamily def Algorithm\+Controller.\+Algorithm\+Controller.\+sort\+Building\+Index\+For\+Each\+Care\+In\+Distance\+Matrix (\begin{DoxyParamCaption}\item[{}]{self }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Description: cette méthode est pour trié les indices de bâtiments pour chaque care en référant la matrice de distance
+:return: (int[][]) la matrice de indices de bâtiments trié
+\end{DoxyVerb}
+ 
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+controllers/Algorithm\+Controller.\+py\end{DoxyCompactItemize}

@@ -1,0 +1,46 @@
+\hypertarget{class_probability_controller_1_1_probability_controller}{}\section{Probability\+Controller.\+Probability\+Controller Class Reference}
+\label{class_probability_controller_1_1_probability_controller}\index{Probability\+Controller.\+Probability\+Controller@{Probability\+Controller.\+Probability\+Controller}}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+def \mbox{\hyperlink{class_probability_controller_1_1_probability_controller_a842dac0f2f434e2ddab5d108c70e13fb}{calculate\+Probability}} (self, eta, tau, boolean\+List)
+\item 
+def \mbox{\hyperlink{class_probability_controller_1_1_probability_controller_a0cb0e1ffa81219cf1493859c897edb01}{generate\+Probability}} (self, id\+Probability\+List, probability\+List)
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+\begin{DoxyVerb}Description: cette classe est pour contrôler la probabilité lorsque les fourmis déplacent
+Attributs: rien
+\end{DoxyVerb}
+ 
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{class_probability_controller_1_1_probability_controller_a842dac0f2f434e2ddab5d108c70e13fb}\label{class_probability_controller_1_1_probability_controller_a842dac0f2f434e2ddab5d108c70e13fb}} 
+\index{Probability\+Controller\+::\+Probability\+Controller@{Probability\+Controller\+::\+Probability\+Controller}!calculate\+Probability@{calculate\+Probability}}
+\index{calculate\+Probability@{calculate\+Probability}!Probability\+Controller\+::\+Probability\+Controller@{Probability\+Controller\+::\+Probability\+Controller}}
+\subsubsection{\texorpdfstring{calculate\+Probability()}{calculateProbability()}}
+{\footnotesize\ttfamily def Probability\+Controller.\+Probability\+Controller.\+calculate\+Probability (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{eta,  }\item[{}]{tau,  }\item[{}]{boolean\+List }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Description: cette méthode est pour calculer la probabilité de déplacement
+:param eta: (float) la désirabilité de déplacement
+:param tau: (float) la quantité de phéromones existant sur un nœud de bâtiment ou un arc entre un bâtiment et un care
+:param booleanList: (boolean[]) soit la liste qui marque si le bâtiment est déjà affecté, soit la liste qui marque si le care est plein
+:return: probability: (float) la probabilité de déplacement calculée
+\end{DoxyVerb}
+ \mbox{\Hypertarget{class_probability_controller_1_1_probability_controller_a0cb0e1ffa81219cf1493859c897edb01}\label{class_probability_controller_1_1_probability_controller_a0cb0e1ffa81219cf1493859c897edb01}} 
+\index{Probability\+Controller\+::\+Probability\+Controller@{Probability\+Controller\+::\+Probability\+Controller}!generate\+Probability@{generate\+Probability}}
+\index{generate\+Probability@{generate\+Probability}!Probability\+Controller\+::\+Probability\+Controller@{Probability\+Controller\+::\+Probability\+Controller}}
+\subsubsection{\texorpdfstring{generate\+Probability()}{generateProbability()}}
+{\footnotesize\ttfamily def Probability\+Controller.\+Probability\+Controller.\+generate\+Probability (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{id\+Probability\+List,  }\item[{}]{probability\+List }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Description: cette méthode est pour sélectionner un événement qui correspond à une probabilité au hasard
+:param idProbabilityList: (int[]) la séquence qui contient les identifiants de bâtiment ou de care
+:param probabilityList: (float[]) la liste de probabilité de déplacement
+:return: item: (int) l'identifiant de l'arcticle(bâtiment ou care) sélectionné au hasard selon les probabilités
+\end{DoxyVerb}
+ 
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+controllers/Probability\+Controller.\+py\end{DoxyCompactItemize}

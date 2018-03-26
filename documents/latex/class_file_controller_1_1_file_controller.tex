@@ -1,0 +1,83 @@
+\hypertarget{class_file_controller_1_1_file_controller}{}\section{File\+Controller.\+File\+Controller Class Reference}
+\label{class_file_controller_1_1_file_controller}\index{File\+Controller.\+File\+Controller@{File\+Controller.\+File\+Controller}}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+def \mbox{\hyperlink{class_file_controller_1_1_file_controller_a2302794d8bc553158b300c868dcc32c1}{read\+Building\+File}} (self, building\+Filename)
+\item 
+def \mbox{\hyperlink{class_file_controller_1_1_file_controller_a29b92a4d19263d13732a9edf7d218602}{read\+Care\+File}} (self, care\+Filename)
+\item 
+def \mbox{\hyperlink{class_file_controller_1_1_file_controller_a77fe65432e567dc86472b95759db1ee7}{read\+Distance\+File}} (self, distance\+Filename)
+\item 
+def \mbox{\hyperlink{class_file_controller_1_1_file_controller_a5d023bfee30423bd602d153f08f89910}{write\+Solution\+File}} (self, solution\+Filename, best\+Solution, instance)
+\item 
+def \mbox{\hyperlink{class_file_controller_1_1_file_controller_add13ed4f13f217efae17bd3f2e0f1563}{write\+Quality\+File}} (self, best\+Quality\+Of\+Each\+Iteration\+List, average\+Quality\+Of\+Each\+Iteration\+List)
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+\begin{DoxyVerb}Description: cette classe est le controleur de fichier, y compris la lecture et l'écriture
+Attribut: rien
+\end{DoxyVerb}
+ 
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{class_file_controller_1_1_file_controller_a2302794d8bc553158b300c868dcc32c1}\label{class_file_controller_1_1_file_controller_a2302794d8bc553158b300c868dcc32c1}} 
+\index{File\+Controller\+::\+File\+Controller@{File\+Controller\+::\+File\+Controller}!read\+Building\+File@{read\+Building\+File}}
+\index{read\+Building\+File@{read\+Building\+File}!File\+Controller\+::\+File\+Controller@{File\+Controller\+::\+File\+Controller}}
+\subsubsection{\texorpdfstring{read\+Building\+File()}{readBuildingFile()}}
+{\footnotesize\ttfamily def File\+Controller.\+File\+Controller.\+read\+Building\+File (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{building\+Filename }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Description: cette méthode est pour lire le fichier de bâtiment
+:param buildingFilename: (String) le nom du fichier de bâtiment
+:return: buildingContentList: (String[]) la liste de lignes du fichier de bâtiment
+\end{DoxyVerb}
+ \mbox{\Hypertarget{class_file_controller_1_1_file_controller_a29b92a4d19263d13732a9edf7d218602}\label{class_file_controller_1_1_file_controller_a29b92a4d19263d13732a9edf7d218602}} 
+\index{File\+Controller\+::\+File\+Controller@{File\+Controller\+::\+File\+Controller}!read\+Care\+File@{read\+Care\+File}}
+\index{read\+Care\+File@{read\+Care\+File}!File\+Controller\+::\+File\+Controller@{File\+Controller\+::\+File\+Controller}}
+\subsubsection{\texorpdfstring{read\+Care\+File()}{readCareFile()}}
+{\footnotesize\ttfamily def File\+Controller.\+File\+Controller.\+read\+Care\+File (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{care\+Filename }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Description: cette méthode est pour lire le fichier de centre d'accueil(care)
+:param careFilename: (String) le nom du fichier care
+:return: careContentList: (String[]) la liste de lignes du fichier de care
+\end{DoxyVerb}
+ \mbox{\Hypertarget{class_file_controller_1_1_file_controller_a77fe65432e567dc86472b95759db1ee7}\label{class_file_controller_1_1_file_controller_a77fe65432e567dc86472b95759db1ee7}} 
+\index{File\+Controller\+::\+File\+Controller@{File\+Controller\+::\+File\+Controller}!read\+Distance\+File@{read\+Distance\+File}}
+\index{read\+Distance\+File@{read\+Distance\+File}!File\+Controller\+::\+File\+Controller@{File\+Controller\+::\+File\+Controller}}
+\subsubsection{\texorpdfstring{read\+Distance\+File()}{readDistanceFile()}}
+{\footnotesize\ttfamily def File\+Controller.\+File\+Controller.\+read\+Distance\+File (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{distance\+Filename }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Description: cette méthode est pour lire le fichier de distance
+:param distanceFilename: (String) le nom du fichier distance
+:return: distanceContentList: (String[]) la liste de lignes du fichier de distance
+\end{DoxyVerb}
+ \mbox{\Hypertarget{class_file_controller_1_1_file_controller_add13ed4f13f217efae17bd3f2e0f1563}\label{class_file_controller_1_1_file_controller_add13ed4f13f217efae17bd3f2e0f1563}} 
+\index{File\+Controller\+::\+File\+Controller@{File\+Controller\+::\+File\+Controller}!write\+Quality\+File@{write\+Quality\+File}}
+\index{write\+Quality\+File@{write\+Quality\+File}!File\+Controller\+::\+File\+Controller@{File\+Controller\+::\+File\+Controller}}
+\subsubsection{\texorpdfstring{write\+Quality\+File()}{writeQualityFile()}}
+{\footnotesize\ttfamily def File\+Controller.\+File\+Controller.\+write\+Quality\+File (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{best\+Quality\+Of\+Each\+Iteration\+List,  }\item[{}]{average\+Quality\+Of\+Each\+Iteration\+List }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Description: cette méthode est pour écrire les qualités des meilleures solutions de chaque itération et
+        les qualités moyennes des solutions de chaque itération dans le fichier de qualité
+:param bestQualityOfEachIterationList: (float[]) la liste de qualités des meilleures solutions de chaque itération
+:param averageQualityOfEachIterationList: (float[]) la liste de qualités moyennes de solutions de chaque itération
+:return: rien
+\end{DoxyVerb}
+ \mbox{\Hypertarget{class_file_controller_1_1_file_controller_a5d023bfee30423bd602d153f08f89910}\label{class_file_controller_1_1_file_controller_a5d023bfee30423bd602d153f08f89910}} 
+\index{File\+Controller\+::\+File\+Controller@{File\+Controller\+::\+File\+Controller}!write\+Solution\+File@{write\+Solution\+File}}
+\index{write\+Solution\+File@{write\+Solution\+File}!File\+Controller\+::\+File\+Controller@{File\+Controller\+::\+File\+Controller}}
+\subsubsection{\texorpdfstring{write\+Solution\+File()}{writeSolutionFile()}}
+{\footnotesize\ttfamily def File\+Controller.\+File\+Controller.\+write\+Solution\+File (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{solution\+Filename,  }\item[{}]{best\+Solution,  }\item[{}]{instance }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Description: cette méthode est pour écrire la meilleure solutions dans le fichier de solution
+:param solutionFilename: (String) le nom du fichier de solution
+:param bestSolution: (l'object de la classe de SolutionModel) la meilleure solutions
+:param instance: (l'objet de la classe de InstanceModel) l'instance pour ce projet
+:return: rien
+\end{DoxyVerb}
+ 
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+controllers/File\+Controller.\+py\end{DoxyCompactItemize}

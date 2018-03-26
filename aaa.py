@@ -1,8 +1,7 @@
 import time
 import copy
-
-# 插入排序 576s
-def insert_sort(copiedDistanceMatrix, distanceSortedBuildingIndexMatrix):
+# insertion sort 576s
+def insertion_sort(copiedDistanceMatrix, distanceSortedBuildingIndexMatrix):
     indexCare = 0
     while indexCare < len(copiedDistanceMatrix[0]):
         sortOneColumnStartTime = time.time()
@@ -27,7 +26,7 @@ def insert_sort(copiedDistanceMatrix, distanceSortedBuildingIndexMatrix):
         indexCare += 1
 
 
-#冒泡排序 529s
+#bubble sort 529s
 def bubble_sort(copiedDistanceMatrix, distanceSortedBuildingIndexMatrix):
     indexCare = 0
     while indexCare < len(copiedDistanceMatrix[0]):
@@ -48,8 +47,8 @@ def bubble_sort(copiedDistanceMatrix, distanceSortedBuildingIndexMatrix):
         indexCare += 1
 
 
-# 选择排序 274s
-def select_sort(copiedDistanceMatrix, distanceSortedBuildingIndexMatrix):
+# selection sort 274s
+def selection_sort(copiedDistanceMatrix, distanceSortedBuildingIndexMatrix):
     indexCare = 0
     while indexCare < len(copiedDistanceMatrix[0]):
         sortOneColumnStartTime = time.time()
@@ -70,7 +69,7 @@ def select_sort(copiedDistanceMatrix, distanceSortedBuildingIndexMatrix):
         indexCare + 1, sortOneColumnEndTime - sortOneColumnStartTime))
         indexCare += 1
 
-# 归并排序 0s
+#merge sort 0s
 def merge_sort(distanceColumn, distanceIndexRow):
     if len(distanceColumn) <= 1:
         return distanceColumn, distanceIndexRow

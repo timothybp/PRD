@@ -110,7 +110,7 @@ class InstanceController:
         print('Finish constructing the instance, it takes %d s!\n\n' % (constructInstanceEndTime - constructInstanceStartTime))
 
 
-    def solveProblem(self,iterationTimes, careEffectRadius, solutionFileName):
+    def solveProblem(self,iterationTimes, careEffectRadius, solutionFileName, qualityFileName):
         '''
         Description: cette méthode fournit la service de résoudre le problème
         :param iterationTimes: (int) la fois d'itération
@@ -133,4 +133,4 @@ class InstanceController:
         fileCtrl.writeSolutionFile(solutionFileName, bestSolution, self.instance)
         # écrire les quantités des meiileures solutions et les quantités moyennes des solutions de chaque itération
         # dans le fichier de qualité
-        fileCtrl.writeQualityFile(bestQualityOfSolutionForEachIterationList, averageQualityOfSolutionForEachIterationList)
+        fileCtrl.writeQualityFile(qualityFileName, bestQualityOfSolutionForEachIterationList, averageQualityOfSolutionForEachIterationList)

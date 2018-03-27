@@ -106,7 +106,7 @@ class FileController:
             result.write(strToWrite)
 
 
-    def writeQualityFile(self, bestQualityOfEachIterationList, averageQualityOfEachIterationList):
+    def writeQualityFile(self, qualityFileName, bestQualityOfEachIterationList, averageQualityOfEachIterationList):
         '''
         Description: cette méthode est pour écrire les qualités des meilleures solutions de chaque itération et
                         les qualités moyennes des solutions de chaque itération dans le fichier de qualité
@@ -115,7 +115,7 @@ class FileController:
         :return: rien
         '''
 
-        with open('files/quality.txt', 'wt') as quality:
+        with open(qualityFileName, 'wt') as quality:
             i = 0
             # ajouter les titres (ID_Iteration  Best_Quality    Average_Quality) dans la première ligne
             strToWrite = 'ID_Iteration\tBest_Quality\tAverage_Quality\n'

@@ -14,8 +14,9 @@ class TestParameters:
                     averageQualityOfSolutionForEachIterationList.append(float(quality.split('\t')[2]))
                 counter += 1
 
+        maxQualityIteration = bestQualityOfSolutionForEachIterationList.index(max(bestQualityOfSolutionForEachIterationList))
+        print("La meilleure solution est dans itération %d" % int(maxQualityIteration))
         iteration = len(bestQualityOfSolutionForEachIterationList)
-        print(iteration)
         x = [x for x in range(0,iteration)]
         y1 = bestQualityOfSolutionForEachIterationList
         y2 = averageQualityOfSolutionForEachIterationList

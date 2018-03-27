@@ -2,29 +2,16 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="6fa3390e-1f2d-4554-82c1-dadcb290395a" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tests/unitTest/TestAlgorithmController.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tests/unitTest/TestInstanceController.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/aaa.py" afterPath="$PROJECT_DIR$/aaa.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/controllers/AlgorithmController.py" afterPath="$PROJECT_DIR$/controllers/AlgorithmController.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/controllers/FileController.py" afterPath="$PROJECT_DIR$/controllers/FileController.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/controllers/InstanceController.py" afterPath="$PROJECT_DIR$/controllers/InstanceController.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/controllers/ProbabilityController.py" afterPath="$PROJECT_DIR$/controllers/ProbabilityController.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/files/LOD9679120_IdNet_NSACr3.txt" afterPath="$PROJECT_DIR$/files/LOD9679120_IdNet_NSACr3.txt" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/files/Rq22_51760B_TriCrOID_TriNSACr4.txt" afterPath="$PROJECT_DIR$/files/Rq22_51760B_TriCrOID_TriNSACr4.txt" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/files/Rq33_187CareMoveID188.txt" afterPath="$PROJECT_DIR$/files/Rq33_187CareMoveID188.txt" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/files/bestSolution.txt" afterPath="$PROJECT_DIR$/files/bestSolution.txt" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/files/quality.txt" afterPath="$PROJECT_DIR$/files/quality.txt" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/main.py" afterPath="$PROJECT_DIR$/main.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/models/ant/AntModel.py" afterPath="$PROJECT_DIR$/models/ant/AntModel.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/models/ant/SolutionModel.py" afterPath="$PROJECT_DIR$/models/ant/SolutionModel.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/models/data/BuildingModel.py" afterPath="$PROJECT_DIR$/models/data/BuildingModel.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/models/data/CareModel.py" afterPath="$PROJECT_DIR$/models/data/CareModel.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/models/instance/InstanceModel.py" afterPath="$PROJECT_DIR$/models/instance/InstanceModel.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/models/pheromone/PheromoneEdge.py" afterPath="$PROJECT_DIR$/models/pheromone/PheromoneEdge.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/models/pheromone/PheromoneModel.py" afterPath="$PROJECT_DIR$/models/pheromone/PheromoneModel.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/models/pheromone/PheromoneNode.py" afterPath="$PROJECT_DIR$/models/pheromone/PheromoneNode.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tests/functionalTest/TestParameters.py" afterPath="$PROJECT_DIR$/tests/functionalTest/TestParameters.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tests/unitTest/TestAlgorithmController.py" afterPath="$PROJECT_DIR$/tests/unitTest/TestAlgorithmController.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tests/unitTest/TestFileController.py" afterPath="$PROJECT_DIR$/tests/unitTest/TestFileController.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tests/unitTest/TestInstanceController.py" afterPath="$PROJECT_DIR$/tests/unitTest/TestInstanceController.py" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -35,31 +22,31 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="InstanceController.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/controllers/InstanceController.py">
+      <file leaf-file-name="TestSolution.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/tests/functionalTest/TestSolution.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="3402">
-              <caret line="134" column="36" lean-forward="false" selection-start-line="134" selection-start-column="36" selection-end-line="134" selection-end-column="36" />
+            <state relative-caret-position="252">
+              <caret line="43" column="0" lean-forward="false" selection-start-line="43" selection-start-column="0" selection-end-line="45" selection-end-column="26" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="main.py" pinned="false" current-in-tab="false">
+      <file leaf-file-name="TestParameters.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/tests/functionalTest/TestParameters.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="216">
+              <caret line="18" column="66" lean-forward="false" selection-start-line="18" selection-start-column="66" selection-end-line="18" selection-end-column="66" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="main.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/main.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="297">
-              <caret line="13" column="31" lean-forward="false" selection-start-line="13" selection-start-column="31" selection-end-line="13" selection-end-column="31" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="AlgorithmController.py" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/controllers/AlgorithmController.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="243">
-              <caret line="559" column="63" lean-forward="false" selection-start-line="559" selection-start-column="63" selection-end-line="559" selection-end-column="63" />
+            <state relative-caret-position="171">
+              <caret line="14" column="0" lean-forward="true" selection-start-line="14" selection-start-column="0" selection-end-line="14" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -76,7 +63,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>print</find>
       <find>copy</find>
       <find>objective</find>
       <find>antList</find>
@@ -93,6 +79,8 @@
       <find>candidateList</find>
       <find>tran</find>
       <find>transition</find>
+      <find>careToFillList</find>
+      <find>print</find>
     </findStrings>
     <replaceStrings>
       <replace>candidateListForCare</replace>
@@ -114,11 +102,7 @@
         <option value="$PROJECT_DIR$/tests/TestProbabilityController.py" />
         <option value="$PROJECT_DIR$/files/Rq22_51760B_TriCrOID_TriNSACr4.txt" />
         <option value="$PROJECT_DIR$/tests/functionalTest/TestSolution.py" />
-        <option value="$PROJECT_DIR$/tests/functionalTest/TestParameters.py" />
-        <option value="$PROJECT_DIR$/tests/unitTest/TestAlgorithmController.py" />
         <option value="$PROJECT_DIR$/files/LOD9679120_IdNet_NSACr3.txt" />
-        <option value="$PROJECT_DIR$/tests/unitTest/TestInstanceController.py" />
-        <option value="$PROJECT_DIR$/tests/unitTest/TestFileController.py" />
         <option value="$PROJECT_DIR$/aaa.py" />
         <option value="$PROJECT_DIR$/models/ant/__init__.py" />
         <option value="$PROJECT_DIR$/__init__.py" />
@@ -130,12 +114,16 @@
         <option value="$PROJECT_DIR$/models/pheromone/PheromoneModel.py" />
         <option value="$PROJECT_DIR$/models/pheromone/PheromoneEdge.py" />
         <option value="$PROJECT_DIR$/models/pheromone/PheromoneNode.py" />
-        <option value="$PROJECT_DIR$/controllers/FileController.py" />
         <option value="$PROJECT_DIR$/controllers/ProbabilityController.py" />
-        <option value="$PROJECT_DIR$/controllers/InstanceController.py" />
-        <option value="$PROJECT_DIR$/main.py" />
         <option value="$PROJECT_DIR$/files/bestSolution.txt" />
         <option value="$PROJECT_DIR$/controllers/AlgorithmController.py" />
+        <option value="$PROJECT_DIR$/controllers/FileController.py" />
+        <option value="$PROJECT_DIR$/controllers/InstanceController.py" />
+        <option value="$PROJECT_DIR$/tests/unitTest/TestInstanceController.py" />
+        <option value="$PROJECT_DIR$/tests/unitTest/TestAlgorithmController.py" />
+        <option value="$PROJECT_DIR$/tests/unitTest/TestFileController.py" />
+        <option value="$PROJECT_DIR$/tests/functionalTest/TestParameters.py" />
+        <option value="$PROJECT_DIR$/main.py" />
       </list>
     </option>
   </component>
@@ -219,6 +207,12 @@
             </path>
             <path>
               <item name="PRD" type="b2602c69:ProjectViewProjectNode" />
+              <item name="PRD" type="462c0819:PsiDirectoryNode" />
+              <item name="tests" type="462c0819:PsiDirectoryNode" />
+              <item name="unitTest" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="PRD" type="b2602c69:ProjectViewProjectNode" />
               <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
             </path>
             <path>
@@ -255,24 +249,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Python.main">
-    <configuration name="AntModel" type="PythonConfigurationType" factoryName="Python" temporary="true">
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/models/ant" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <module name="PRD" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/models/ant/AntModel.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <option name="EMULATE_TERMINAL" value="false" />
-    </configuration>
+  <component name="RunManager" selected="Python.TestParameters">
     <configuration name="TestParameters" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -290,39 +267,47 @@
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
     </configuration>
-    <configuration name="TestSolution" type="PythonConfigurationType" factoryName="Python" temporary="true">
+    <configuration name="Unittests in TestAlgorithmController.py" type="tests" factoryName="Unittests" temporary="true" nameIsGenerated="true">
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
+      <envs />
       <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/tests/functionalTest" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/tests/unitTest" />
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <module name="PRD" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/tests/functionalTest/TestSolution.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="_new_additionalArguments" value="&quot;&quot;" />
+      <option name="_new_target" value="&quot;$PROJECT_DIR$/tests/unitTest/TestAlgorithmController.py&quot;" />
+      <option name="_new_targetType" value="&quot;PATH&quot;" />
     </configuration>
-    <configuration name="__init__" type="PythonConfigurationType" factoryName="Python" temporary="true">
+    <configuration name="Unittests in TestFileController.py" type="tests" factoryName="Unittests" temporary="true" nameIsGenerated="true">
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
+      <envs />
       <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/models/ant" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/tests/unitTest" />
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <module name="PRD" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/models/ant/__init__.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="_new_additionalArguments" value="&quot;&quot;" />
+      <option name="_new_target" value="&quot;$PROJECT_DIR$/tests/unitTest/TestFileController.py&quot;" />
+      <option name="_new_targetType" value="&quot;PATH&quot;" />
+    </configuration>
+    <configuration name="Unittests in TestInstanceController.py" type="tests" factoryName="Unittests" temporary="true" nameIsGenerated="true">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs />
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/tests/unitTest" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <module name="PRD" />
+      <option name="_new_additionalArguments" value="&quot;&quot;" />
+      <option name="_new_target" value="&quot;$PROJECT_DIR$/tests/unitTest/TestInstanceController.py&quot;" />
+      <option name="_new_targetType" value="&quot;PATH&quot;" />
     </configuration>
     <configuration name="main" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -342,19 +327,19 @@
       <option name="EMULATE_TERMINAL" value="false" />
     </configuration>
     <list size="5">
-      <item index="0" class="java.lang.String" itemvalue="Python.TestParameters" />
-      <item index="1" class="java.lang.String" itemvalue="Python.AntModel" />
-      <item index="2" class="java.lang.String" itemvalue="Python.__init__" />
-      <item index="3" class="java.lang.String" itemvalue="Python.main" />
-      <item index="4" class="java.lang.String" itemvalue="Python.TestSolution" />
+      <item index="0" class="java.lang.String" itemvalue="Python.main" />
+      <item index="1" class="java.lang.String" itemvalue="Python tests.Unittests in TestAlgorithmController.py" />
+      <item index="2" class="java.lang.String" itemvalue="Python tests.Unittests in TestInstanceController.py" />
+      <item index="3" class="java.lang.String" itemvalue="Python tests.Unittests in TestFileController.py" />
+      <item index="4" class="java.lang.String" itemvalue="Python.TestParameters" />
     </list>
     <recent_temporary>
       <list size="5">
-        <item index="0" class="java.lang.String" itemvalue="Python.main" />
-        <item index="1" class="java.lang.String" itemvalue="Python.TestSolution" />
-        <item index="2" class="java.lang.String" itemvalue="Python.TestParameters" />
-        <item index="3" class="java.lang.String" itemvalue="Python.AntModel" />
-        <item index="4" class="java.lang.String" itemvalue="Python.__init__" />
+        <item index="0" class="java.lang.String" itemvalue="Python.TestParameters" />
+        <item index="1" class="java.lang.String" itemvalue="Python.main" />
+        <item index="2" class="java.lang.String" itemvalue="Python tests.Unittests in TestFileController.py" />
+        <item index="3" class="java.lang.String" itemvalue="Python tests.Unittests in TestInstanceController.py" />
+        <item index="4" class="java.lang.String" itemvalue="Python tests.Unittests in TestAlgorithmController.py" />
       </list>
     </recent_temporary>
   </component>
@@ -372,35 +357,35 @@
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="Unittests_in_TestAlgorithmController_py - 2018.03.22 at 09h 51m 04s.xml">
+    <history-entry file="Unittests_in_TestAlgorithmController_py - 2018.03.27 at 02h 47m 51s.xml">
       <configuration name="Unittests in TestAlgorithmController.py" configurationId="tests" />
     </history-entry>
-    <history-entry file="Unittests_in_TestAlgorithmController_py - 2018.03.22 at 09h 51m 25s.xml">
+    <history-entry file="Unittests_in_TestAlgorithmController_py - 2018.03.27 at 02h 48m 08s.xml">
       <configuration name="Unittests in TestAlgorithmController.py" configurationId="tests" />
     </history-entry>
-    <history-entry file="Unittests_in_TestAlgorithmController_py - 2018.03.22 at 09h 51m 34s.xml">
+    <history-entry file="Unittests_in_TestAlgorithmController_py - 2018.03.27 at 02h 51m 23s.xml">
       <configuration name="Unittests in TestAlgorithmController.py" configurationId="tests" />
     </history-entry>
-    <history-entry file="Unittests_in_TestAlgorithmController_py - 2018.03.22 at 09h 55m 20s.xml">
-      <configuration name="Unittests in TestAlgorithmController.py" configurationId="tests" />
+    <history-entry file="Unittests_in_TestFileController_py - 2018.03.27 at 03h 16m 36s.xml">
+      <configuration name="Unittests in TestFileController.py" configurationId="tests" />
     </history-entry>
-    <history-entry file="Unittests_in_TestAlgorithmController_py - 2018.03.26 at 10h 31m 23s.xml">
-      <configuration name="Unittests in TestAlgorithmController.py" configurationId="tests" />
+    <history-entry file="Unittests_in_TestFileController_py - 2018.03.27 at 03h 17m 11s.xml">
+      <configuration name="Unittests in TestFileController.py" configurationId="tests" />
     </history-entry>
-    <history-entry file="Unittests_in_TestProbabilityController_py - 2018.03.21 at 18h 39m 46s.xml">
-      <configuration name="Unittests in TestProbabilityController.py" configurationId="tests" />
+    <history-entry file="Unittests_in_TestFileController_py - 2018.03.27 at 03h 17m 30s.xml">
+      <configuration name="Unittests in TestFileController.py" configurationId="tests" />
     </history-entry>
-    <history-entry file="Unittests_in_TestProbabilityController_py - 2018.03.21 at 18h 42m 09s.xml">
-      <configuration name="Unittests in TestProbabilityController.py" configurationId="tests" />
+    <history-entry file="Unittests_in_TestInstanceController_py - 2018.03.27 at 02h 57m 22s.xml">
+      <configuration name="Unittests in TestInstanceController.py" configurationId="tests" />
     </history-entry>
-    <history-entry file="Unittests_in_TestProbabilityController_py - 2018.03.21 at 18h 42m 15s.xml">
-      <configuration name="Unittests in TestProbabilityController.py" configurationId="tests" />
+    <history-entry file="Unittests_in_TestInstanceController_py - 2018.03.27 at 02h 58m 19s.xml">
+      <configuration name="Unittests in TestInstanceController.py" configurationId="tests" />
     </history-entry>
-    <history-entry file="Unittests_in_TestProbabilityController_py - 2018.03.21 at 18h 42m 51s.xml">
-      <configuration name="Unittests in TestProbabilityController.py" configurationId="tests" />
+    <history-entry file="Unittests_in_TestInstanceController_py - 2018.03.27 at 03h 03m 36s.xml">
+      <configuration name="Unittests in TestInstanceController.py" configurationId="tests" />
     </history-entry>
-    <history-entry file="Unittests_in_functionalTest - 2018.03.26 at 00h 37m 05s.xml">
-      <configuration name="Unittests in functionalTest" configurationId="tests" />
+    <history-entry file="Unittests_in_TestInstanceController_py - 2018.03.27 at 03h 05m 14s.xml">
+      <configuration name="Unittests in TestInstanceController.py" configurationId="tests" />
     </history-entry>
   </component>
   <component name="TodoView">
@@ -414,8 +399,9 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-11" y="-11" width="1942" height="1042" extended-state="7" />
+    <editor active="true" />
     <layout>
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.3288337" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.3288337" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32897863" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
@@ -459,32 +445,20 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="XDebuggerManager">
-    <breakpoint-manager />
+    <breakpoint-manager>
+      <option name="time" value="1" />
+    </breakpoint-manager>
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/controllers/AlgorithmController.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="810">
-          <caret line="30" column="104" lean-forward="true" selection-start-line="30" selection-start-column="56" selection-end-line="30" selection-end-column="104" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/files/result.txt" />
-    <entry file="file://$PROJECT_DIR$/controllers/InstanceController.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/models/data/BuildingModel.py" />
     <entry file="file://$PROJECT_DIR$/controllers/AlgorithmController.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="8370">
           <caret line="316" column="0" lean-forward="false" selection-start-line="316" selection-start-column="0" selection-end-line="316" selection-end-column="0" />
-          <folding />
+          <folding>
+            <element signature="e#21#32#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -585,59 +559,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/tests/unitTest/TestAlgorithmController.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="270">
-          <caret line="10" column="42" lean-forward="false" selection-start-line="10" selection-start-column="42" selection-end-line="10" selection-end-column="42" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/tests/unitTest/TestProbabilityController.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="513">
-          <caret line="20" column="0" lean-forward="true" selection-start-line="20" selection-start-column="0" selection-end-line="20" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/tests/functionalTest/TestSolution.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="283">
-          <caret line="43" column="0" lean-forward="false" selection-start-line="43" selection-start-column="0" selection-end-line="45" selection-end-column="26" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/tests/functionalTest/TestParameters.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="324">
-          <caret line="13" column="102" lean-forward="false" selection-start-line="13" selection-start-column="102" selection-end-line="13" selection-end-column="102" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/files/quality.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="27">
-          <caret line="1" column="50" lean-forward="false" selection-start-line="1" selection-start-column="50" selection-end-line="1" selection-end-column="50" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/files/Rq22_51760B_TriCrOID_TriNSACr4.txt">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="2700">
           <caret line="100" column="4" lean-forward="false" selection-start-line="100" selection-start-column="4" selection-end-line="100" selection-end-column="4" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/tests/unitTest/TestFileController.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="414">
-          <caret line="20" column="19" lean-forward="false" selection-start-line="20" selection-start-column="19" selection-end-line="20" selection-end-column="19" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/tests/unitTest/TestInstanceController.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="162">
-          <caret line="7" column="34" lean-forward="false" selection-start-line="7" selection-start-column="28" selection-end-line="7" selection-end-column="34" />
         </state>
       </provider>
     </entry>
@@ -651,14 +576,6 @@
     <entry file="file://$PROJECT_DIR$/models/bb/__init__.py" />
     <entry file="file://$PROJECT_DIR$/__init__.py" />
     <entry file="file://$PROJECT_DIR$/models/ant/__init__.py" />
-    <entry file="file://$PROJECT_DIR$/files/LOD9679120_IdNet_NSACr3.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="270">
-          <caret line="16" column="0" lean-forward="false" selection-start-line="16" selection-start-column="0" selection-end-line="16" selection-end-column="25" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/models/ant/AntModel.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
@@ -723,14 +640,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/controllers/FileController.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="19" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/controllers/ProbabilityController.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1350">
@@ -739,34 +648,138 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/controllers/InstanceController.py">
+    <entry file="file://$PROJECT_DIR$/tests/unitTest/TestProbabilityController.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="3402">
-          <caret line="134" column="36" lean-forward="false" selection-start-line="134" selection-start-column="36" selection-end-line="134" selection-end-column="36" />
+        <state relative-caret-position="513">
+          <caret line="20" column="0" lean-forward="true" selection-start-line="20" selection-start-column="0" selection-end-line="20" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/files/bestSolution.txt">
+    <entry file="file://D:/python 3.6.2/Lib/unittest/case.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1134">
-          <caret line="42" column="0" lean-forward="false" selection-start-line="42" selection-start-column="0" selection-end-line="42" selection-end-column="11" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/main.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="297">
-          <caret line="13" column="31" lean-forward="false" selection-start-line="13" selection-start-column="31" selection-end-line="13" selection-end-column="31" />
+        <state relative-caret-position="166">
+          <caret line="681" column="0" lean-forward="false" selection-start-line="681" selection-start-column="0" selection-end-line="681" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/controllers/AlgorithmController.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="243">
-          <caret line="559" column="63" lean-forward="false" selection-start-line="559" selection-start-column="63" selection-end-line="559" selection-end-column="63" />
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="19" />
+          <folding>
+            <element signature="e#21#32#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/tests/unitTest/TestInstanceController.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="297">
+          <caret line="11" column="0" lean-forward="true" selection-start-line="11" selection-start-column="0" selection-end-line="11" selection-end-column="0" />
+          <folding>
+            <element signature="e#21#36#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/controllers/InstanceController.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="609">
+          <caret line="123" column="37" lean-forward="true" selection-start-line="123" selection-start-column="37" selection-end-line="123" selection-end-column="37" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/tests/unitTest/TestAlgorithmController.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="27">
+          <caret line="94" column="0" lean-forward="true" selection-start-line="94" selection-start-column="0" selection-end-line="94" selection-end-column="0" />
+          <folding>
+            <element signature="e#21#36#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/files/LOD9679120_IdNet_NSACr3.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-12731">
+          <caret line="16" column="0" lean-forward="false" selection-start-line="16" selection-start-column="0" selection-end-line="16" selection-end-column="25" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/files/quality_test.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="27">
+          <caret line="1" column="4" lean-forward="false" selection-start-line="1" selection-start-column="4" selection-end-line="1" selection-end-column="28" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/files/bestSolution.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="135">
+          <caret line="5" column="5" lean-forward="false" selection-start-line="5" selection-start-column="5" selection-end-line="5" selection-end-column="5" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/files/solution_test.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/tests/unitTest/TestFileController.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="702">
+          <caret line="26" column="45" lean-forward="false" selection-start-line="26" selection-start-column="45" selection-end-line="26" selection-end-column="45" />
+          <folding>
+            <element signature="e#21#36#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/controllers/FileController.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="117">
+          <caret line="108" column="113" lean-forward="false" selection-start-line="108" selection-start-column="31" selection-end-line="108" selection-end-column="113" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/tests/functionalTest/TestSolution.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="252">
+          <caret line="43" column="0" lean-forward="false" selection-start-line="43" selection-start-column="0" selection-end-line="45" selection-end-column="26" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/files/quality.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="27">
+          <caret line="1" column="48" lean-forward="true" selection-start-line="1" selection-start-column="4" selection-end-line="1" selection-end-column="6" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/tests/functionalTest/TestParameters.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="216">
+          <caret line="18" column="66" lean-forward="false" selection-start-line="18" selection-start-column="66" selection-end-line="18" selection-end-column="66" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/main.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="171">
+          <caret line="14" column="0" lean-forward="true" selection-start-line="14" selection-start-column="0" selection-end-line="14" selection-end-column="0" />
           <folding />
         </state>
       </provider>

@@ -9,12 +9,7 @@ class calculateProbability(unittest.TestCase):
         eta = 1/4000
         booleanList = [False, True, True, False, True]
 
-        sum = 0
-        for i, booleanElement in enumerate(booleanList):
-            sum += tau * eta * (1 - booleanElement)
-        probability = (tau * eta) / (1 + sum)
-
-        self.assertEqual(pc.calculateProbability(eta, tau, booleanList), probability)
+        self.assertEqual(pc.calculateProbability(eta, tau, booleanList), 0.00019992003198720514)
 
     def test_generateProbability(self):
         pc = ProbabilityController()

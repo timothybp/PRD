@@ -106,29 +106,42 @@ class FileController:
             result.write(strToWrite)
 
 
-    def writeQualityFile(self, qualityFileName, bestQualityOfEachIterationList, averageQualityOfEachIterationList):
+    def writeQualityFile(self, qualityFileName, bestQualityOfEachIterationList,
+                         averageQualityOfEachIterationList,distanceTotalOfEachIterationList,
+                         populationAllocatedOfEachIterationList, buildingAllocatedOfEachIterationList):
         '''
         Description: cette méthode est pour écrire les qualités des meilleures solutions de chaque itération et
-                        les qualités moyennes des solutions de chaque itération dans le fichier de qualité
+                        les qualités moyennes des solutions de chaque itération, la distance totale et le nombre
+                        de sans-abris hébergés ainsi que le nombre de bâtiments affectés de chaque itération
+                        dans le fichier de qualité
         :param bestQualityOfEachIterationList: (float[]) la liste de qualités des meilleures solutions de chaque itération
         :param averageQualityOfEachIterationList: (float[]) la liste de qualités moyennes de solutions de chaque itération
+        :param distanceTotalOfEachIterationList: (float[]) la liste de distance totale de la meilleure solution de chaque itération
+        :param populationAllocatedOfEachIterationList: (float[]) la liste de sans-abris totaux hébergés de la meilleure solution de chaque itération
+        :param buildingAllocatedOfEachIterationList: (float[]) la liste de nombre de bâtiments affectés de la meilleure solution de chaque itération
         :return: rien
         '''
 
         with open(qualityFileName, 'wt') as quality:
             i = 0
             # ajouter les titres (ID_Iteration  Best_Quality    Average_Quality) dans la première ligne
-            strToWrite = 'ID_Iteration\tBest_Quality\tAverage_Quality\n'
+            strToWrite = 'ID_Iteration\tBest_Quality\tAverage_Quality\tDistance_Total\tPopulation_Quantity\tBuilding_Quantity\n'
 
             # écrire les qualités dans le fichier
             while i < len(bestQualityOfEachIterationList):
                 # si c'est pas le dernier élément, ajouter un "\n" à la fin de la ligne
                 if i != len(bestQualityOfEachIterationList) - 1:
-                    strToWrite += str(i+1) + '\t' + str(bestQualityOfEachIterationList[i]) + '\t' + \
-                                  str(averageQualityOfEachIterationList[i]) + '\n'
+                    strToWrite += str(i + 1) + '\t' + str(bestQualityOfEachIterationList[i]) + '\t' + \
+                                  str(averageQualityOfEachIterationList[i]) + '\t' + \
+                                  str(distanceTotalOfEachIterationList[i]) + '\t' + \
+                                  str(populationAllocatedOfEachIterationList[i]) + '\t' + \
+                                  str(buildingAllocatedOfEachIterationList[i]) + '\n'
                 # si c;est le dernier élément，ne pas ajouter "\n"
                 else:
                     strToWrite += str(i + 1) + '\t' + str(bestQualityOfEachIterationList[i]) + '\t' + \
-                                  str(averageQualityOfEachIterationList[i])
+                                  str(averageQualityOfEachIterationList[i]) + '\t' + \
+                                  str(distanceTotalOfEachIterationList[i]) + '\t' + \
+                                  str(populationAllocatedOfEachIterationList[i]) + '\t' + \
+                                  str(buildingAllocatedOfEachIterationList[i])
                 i += 1
             quality.write(strToWrite)

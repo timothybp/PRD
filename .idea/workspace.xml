@@ -2,16 +2,34 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="6fa3390e-1f2d-4554-82c1-dadcb290395a" name="Default" comment="">
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/controllers/__init__.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/models/__init__.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/models/ant/__init__.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/models/data/__init__.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/models/instance/__init__.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/models/pheromone/__init__.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tests/PerformanceTest/ProfilerAlgorithmController.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tests/PerformanceTest/TestProfilerForAllocateBuilding.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tests/PerformanceTest/TestProfilerForChooseCare.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tests/PerformanceTest/__init__.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tests/__init__.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tests/functionalTest/__init__.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tests/unitTest/__init__.py" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/files/bestSolution_test.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/files/quality_test.txt" afterPath="" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/controllers/AlgorithmController.py" afterPath="$PROJECT_DIR$/controllers/AlgorithmController.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/controllers/FileController.py" afterPath="$PROJECT_DIR$/controllers/FileController.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/controllers/InstanceController.py" afterPath="$PROJECT_DIR$/controllers/InstanceController.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/files/LOD9679120_IdNet_NSACr3.txt" afterPath="$PROJECT_DIR$/files/LOD9679120_IdNet_NSACr3.txt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/files/Rq33_187CareMoveID188.txt" afterPath="$PROJECT_DIR$/files/Rq33_187CareMoveID188.txt" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/files/bestSolution.txt" afterPath="$PROJECT_DIR$/files/bestSolution.txt" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/files/quality.txt" afterPath="$PROJECT_DIR$/files/quality.txt" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/main.py" afterPath="$PROJECT_DIR$/main.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tests/functionalTest/TestParameters.py" afterPath="$PROJECT_DIR$/tests/functionalTest/TestParameters.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tests/unitTest/TestAlgorithmController.py" afterPath="$PROJECT_DIR$/tests/unitTest/TestAlgorithmController.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tests/unitTest/TestFileController.py" afterPath="$PROJECT_DIR$/tests/unitTest/TestFileController.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tests/unitTest/TestInstanceController.py" afterPath="$PROJECT_DIR$/tests/unitTest/TestInstanceController.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tests/unitTest/TestProbabilityController.py" afterPath="$PROJECT_DIR$/tests/unitTest/TestProbabilityController.py" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -22,21 +40,41 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="TestSolution.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/tests/functionalTest/TestSolution.py">
+      <file leaf-file-name="TestAlgorithmController.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/tests/unitTest/TestAlgorithmController.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="252">
-              <caret line="43" column="0" lean-forward="false" selection-start-line="43" selection-start-column="0" selection-end-line="45" selection-end-column="26" />
+            <state relative-caret-position="-141">
+              <caret line="186" column="54" lean-forward="false" selection-start-line="186" selection-start-column="13" selection-end-line="186" selection-end-column="54" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="TestParameters.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/tests/functionalTest/TestParameters.py">
+      <file leaf-file-name="bestSolution.txt" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/files/bestSolution.txt">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="216">
-              <caret line="18" column="66" lean-forward="false" selection-start-line="18" selection-start-column="66" selection-end-line="18" selection-end-column="66" />
+            <state relative-caret-position="27">
+              <caret line="13" column="10" lean-forward="true" selection-start-line="13" selection-start-column="10" selection-end-line="13" selection-end-column="10" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="quality.txt" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/files/quality.txt">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="27">
+              <caret line="1" column="15" lean-forward="false" selection-start-line="1" selection-start-column="15" selection-end-line="1" selection-end-column="15" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="ProfilerAlgorithmController.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/tests/PerformanceTest/ProfilerAlgorithmController.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="102">
+              <caret line="295" column="28" lean-forward="true" selection-start-line="295" selection-start-column="28" selection-end-line="295" selection-end-column="28" />
               <folding />
             </state>
           </provider>
@@ -45,9 +83,41 @@
       <file leaf-file-name="main.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/main.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="171">
-              <caret line="14" column="0" lean-forward="true" selection-start-line="14" selection-start-column="0" selection-end-line="14" selection-end-column="0" />
+            <state relative-caret-position="270">
+              <caret line="11" column="14" lean-forward="true" selection-start-line="11" selection-start-column="14" selection-end-line="11" selection-end-column="14" />
               <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="LOD9679120_IdNet_NSACr3.txt" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/files/LOD9679120_IdNet_NSACr3.txt">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="432">
+              <caret line="16" column="0" lean-forward="false" selection-start-line="16" selection-start-column="0" selection-end-line="16" selection-end-column="25" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Rq33_187CareMoveID188.txt" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/files/Rq33_187CareMoveID188.txt">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-2">
+              <caret line="10" column="28" lean-forward="true" selection-start-line="10" selection-start-column="28" selection-end-line="10" selection-end-column="28" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="AlgorithmController.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/controllers/AlgorithmController.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-216">
+              <caret line="624" column="93" lean-forward="false" selection-start-line="624" selection-start-column="21" selection-end-line="624" selection-end-column="99" />
+              <folding>
+                <element signature="e#21#32#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -80,6 +150,8 @@
       <find>tran</find>
       <find>transition</find>
       <find>careToFillList</find>
+      <find>4484</find>
+      <find>profile</find>
       <find>print</find>
     </findStrings>
     <replaceStrings>
@@ -93,8 +165,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/models/data.py" />
-        <option value="$PROJECT_DIR$/models/data/Care.py" />
         <option value="$PROJECT_DIR$/models/Ant/AntModel.py" />
         <option value="$PROJECT_DIR$/models/Ant/SolutionModel.py" />
         <option value="$PROJECT_DIR$/files/result.txt" />
@@ -104,7 +174,6 @@
         <option value="$PROJECT_DIR$/tests/functionalTest/TestSolution.py" />
         <option value="$PROJECT_DIR$/files/LOD9679120_IdNet_NSACr3.txt" />
         <option value="$PROJECT_DIR$/aaa.py" />
-        <option value="$PROJECT_DIR$/models/ant/__init__.py" />
         <option value="$PROJECT_DIR$/__init__.py" />
         <option value="$PROJECT_DIR$/models/ant/AntModel.py" />
         <option value="$PROJECT_DIR$/models/ant/SolutionModel.py" />
@@ -116,18 +185,41 @@
         <option value="$PROJECT_DIR$/models/pheromone/PheromoneNode.py" />
         <option value="$PROJECT_DIR$/controllers/ProbabilityController.py" />
         <option value="$PROJECT_DIR$/files/bestSolution.txt" />
-        <option value="$PROJECT_DIR$/controllers/AlgorithmController.py" />
-        <option value="$PROJECT_DIR$/controllers/FileController.py" />
-        <option value="$PROJECT_DIR$/controllers/InstanceController.py" />
-        <option value="$PROJECT_DIR$/tests/unitTest/TestInstanceController.py" />
-        <option value="$PROJECT_DIR$/tests/unitTest/TestAlgorithmController.py" />
-        <option value="$PROJECT_DIR$/tests/unitTest/TestFileController.py" />
         <option value="$PROJECT_DIR$/tests/functionalTest/TestParameters.py" />
+        <option value="$PROJECT_DIR$/controllers/InstanceController.py" />
+        <option value="$PROJECT_DIR$/tests/unitTest/TestFileController.py" />
+        <option value="$PROJECT_DIR$/tests/PerformanceTest/LineProfilTest.py" />
+        <option value="$PROJECT_DIR$/tests/PerformanceTest/TestMemoryProfil.py" />
+        <option value="$PROJECT_DIR$/tests/PerformanceTest/TestLineProfil.py" />
+        <option value="$PROJECT_DIR$/tests/PerformanceTest/TestLineProfile.py" />
+        <option value="$PROJECT_DIR$/tests/PerformanceTest/TestMemoryProfile.py" />
+        <option value="D:/python 3.6.2/Lib/site-packages/memory_profiler.py" />
+        <option value="$PROJECT_DIR$/tests/PerformanceTest/TestProfile.py" />
+        <option value="$PROJECT_DIR$/tests/__init__.py" />
+        <option value="$PROJECT_DIR$/tests/PerformanceTest/__init__.py" />
+        <option value="$PROJECT_DIR$/tests/PerformanceTest/MemoryProfilerAlgorithmController.py" />
+        <option value="$PROJECT_DIR$/tests/PerformanceTest/LineProfilerAlgorithmController.py" />
+        <option value="$PROJECT_DIR$/tests/functionalTest/__init__.py" />
+        <option value="$PROJECT_DIR$/models/pheromone/__init__.py" />
+        <option value="$PROJECT_DIR$/models/instance/__init__.py" />
+        <option value="$PROJECT_DIR$/models/data/__init__.py" />
+        <option value="$PROJECT_DIR$/models/ant/__init__.py" />
+        <option value="$PROJECT_DIR$/models/__init__.py" />
+        <option value="$PROJECT_DIR$/controllers/__init__.py" />
+        <option value="$PROJECT_DIR$/tests/unitTest/__init__.py" />
+        <option value="$PROJECT_DIR$/controllers/FileController.py" />
+        <option value="$PROJECT_DIR$/tests/unitTest/TestProbabilityController.py" />
+        <option value="$PROJECT_DIR$/tests/unitTest/TestInstanceController.py" />
+        <option value="$PROJECT_DIR$/tests/PerformanceTest/TesProfilerForAllocateBuilding.py" />
+        <option value="$PROJECT_DIR$/tests/PerformanceTest/TestProfilerForChooseCare.py" />
+        <option value="$PROJECT_DIR$/tests/PerformanceTest/ProfilerAlgorithmController.py" />
+        <option value="$PROJECT_DIR$/controllers/AlgorithmController.py" />
+        <option value="$PROJECT_DIR$/tests/unitTest/TestAlgorithmController.py" />
         <option value="$PROJECT_DIR$/main.py" />
       </list>
     </option>
   </component>
-  <component name="ProjectFrameBounds" extendedState="7">
+  <component name="ProjectFrameBounds" extendedState="6">
     <option name="x" value="-10" />
     <option name="width" value="1934" />
     <option name="height" value="1030" />
@@ -148,6 +240,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scratches" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -168,35 +261,6 @@
             <path>
               <item name="PRD" type="b2602c69:ProjectViewProjectNode" />
               <item name="PRD" type="462c0819:PsiDirectoryNode" />
-              <item name="models" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="PRD" type="b2602c69:ProjectViewProjectNode" />
-              <item name="PRD" type="462c0819:PsiDirectoryNode" />
-              <item name="models" type="462c0819:PsiDirectoryNode" />
-              <item name="ant" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="PRD" type="b2602c69:ProjectViewProjectNode" />
-              <item name="PRD" type="462c0819:PsiDirectoryNode" />
-              <item name="models" type="462c0819:PsiDirectoryNode" />
-              <item name="data" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="PRD" type="b2602c69:ProjectViewProjectNode" />
-              <item name="PRD" type="462c0819:PsiDirectoryNode" />
-              <item name="models" type="462c0819:PsiDirectoryNode" />
-              <item name="instance" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="PRD" type="b2602c69:ProjectViewProjectNode" />
-              <item name="PRD" type="462c0819:PsiDirectoryNode" />
-              <item name="models" type="462c0819:PsiDirectoryNode" />
-              <item name="pheromone" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="PRD" type="b2602c69:ProjectViewProjectNode" />
-              <item name="PRD" type="462c0819:PsiDirectoryNode" />
               <item name="tests" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -204,6 +268,12 @@
               <item name="PRD" type="462c0819:PsiDirectoryNode" />
               <item name="tests" type="462c0819:PsiDirectoryNode" />
               <item name="functionalTest" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="PRD" type="b2602c69:ProjectViewProjectNode" />
+              <item name="PRD" type="462c0819:PsiDirectoryNode" />
+              <item name="tests" type="462c0819:PsiDirectoryNode" />
+              <item name="PerformanceTest" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="PRD" type="b2602c69:ProjectViewProjectNode" />
@@ -224,13 +294,12 @@
           <select />
         </subPane>
       </pane>
-      <pane id="Scratches" />
       <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="settings.editor.selected.configurable" value="configurable.group.appearance" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../PRD_copy/PRD" />
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
@@ -281,20 +350,6 @@
       <option name="_new_target" value="&quot;$PROJECT_DIR$/tests/unitTest/TestAlgorithmController.py&quot;" />
       <option name="_new_targetType" value="&quot;PATH&quot;" />
     </configuration>
-    <configuration name="Unittests in TestFileController.py" type="tests" factoryName="Unittests" temporary="true" nameIsGenerated="true">
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs />
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/tests/unitTest" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <module name="PRD" />
-      <option name="_new_additionalArguments" value="&quot;&quot;" />
-      <option name="_new_target" value="&quot;$PROJECT_DIR$/tests/unitTest/TestFileController.py&quot;" />
-      <option name="_new_targetType" value="&quot;PATH&quot;" />
-    </configuration>
     <configuration name="Unittests in TestInstanceController.py" type="tests" factoryName="Unittests" temporary="true" nameIsGenerated="true">
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -307,6 +362,20 @@
       <module name="PRD" />
       <option name="_new_additionalArguments" value="&quot;&quot;" />
       <option name="_new_target" value="&quot;$PROJECT_DIR$/tests/unitTest/TestInstanceController.py&quot;" />
+      <option name="_new_targetType" value="&quot;PATH&quot;" />
+    </configuration>
+    <configuration name="Unittests in TestProbabilityController.py" type="tests" factoryName="Unittests" temporary="true" nameIsGenerated="true">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs />
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/tests/unitTest" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <module name="PRD" />
+      <option name="_new_additionalArguments" value="&quot;&quot;" />
+      <option name="_new_target" value="&quot;$PROJECT_DIR$/tests/unitTest/TestProbabilityController.py&quot;" />
       <option name="_new_targetType" value="&quot;PATH&quot;" />
     </configuration>
     <configuration name="main" type="PythonConfigurationType" factoryName="Python" temporary="true">
@@ -328,23 +397,26 @@
     </configuration>
     <list size="5">
       <item index="0" class="java.lang.String" itemvalue="Python.main" />
-      <item index="1" class="java.lang.String" itemvalue="Python tests.Unittests in TestAlgorithmController.py" />
-      <item index="2" class="java.lang.String" itemvalue="Python tests.Unittests in TestInstanceController.py" />
-      <item index="3" class="java.lang.String" itemvalue="Python tests.Unittests in TestFileController.py" />
+      <item index="1" class="java.lang.String" itemvalue="Python tests.Unittests in TestProbabilityController.py" />
+      <item index="2" class="java.lang.String" itemvalue="Python tests.Unittests in TestAlgorithmController.py" />
+      <item index="3" class="java.lang.String" itemvalue="Python tests.Unittests in TestInstanceController.py" />
       <item index="4" class="java.lang.String" itemvalue="Python.TestParameters" />
     </list>
     <recent_temporary>
       <list size="5">
         <item index="0" class="java.lang.String" itemvalue="Python.TestParameters" />
         <item index="1" class="java.lang.String" itemvalue="Python.main" />
-        <item index="2" class="java.lang.String" itemvalue="Python tests.Unittests in TestFileController.py" />
+        <item index="2" class="java.lang.String" itemvalue="Python tests.Unittests in TestAlgorithmController.py" />
         <item index="3" class="java.lang.String" itemvalue="Python tests.Unittests in TestInstanceController.py" />
-        <item index="4" class="java.lang.String" itemvalue="Python tests.Unittests in TestAlgorithmController.py" />
+        <item index="4" class="java.lang.String" itemvalue="Python tests.Unittests in TestProbabilityController.py" />
       </list>
     </recent_temporary>
   </component>
   <component name="ShelveChangesManager" show_recycled="false">
     <option name="remove_strategy" value="false" />
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
   </component>
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
@@ -357,35 +429,35 @@
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="Unittests_in_TestAlgorithmController_py - 2018.03.27 at 02h 47m 51s.xml">
+    <history-entry file="Unittests_in_TestAlgorithmController_py - 2018.03.28 at 03h 18m 17s.xml">
       <configuration name="Unittests in TestAlgorithmController.py" configurationId="tests" />
     </history-entry>
-    <history-entry file="Unittests_in_TestAlgorithmController_py - 2018.03.27 at 02h 48m 08s.xml">
+    <history-entry file="Unittests_in_TestAlgorithmController_py - 2018.03.28 at 03h 27m 46s.xml">
       <configuration name="Unittests in TestAlgorithmController.py" configurationId="tests" />
     </history-entry>
-    <history-entry file="Unittests_in_TestAlgorithmController_py - 2018.03.27 at 02h 51m 23s.xml">
+    <history-entry file="Unittests_in_TestAlgorithmController_py - 2018.03.28 at 03h 39m 38s.xml">
       <configuration name="Unittests in TestAlgorithmController.py" configurationId="tests" />
     </history-entry>
-    <history-entry file="Unittests_in_TestFileController_py - 2018.03.27 at 03h 16m 36s.xml">
-      <configuration name="Unittests in TestFileController.py" configurationId="tests" />
+    <history-entry file="Unittests_in_TestAlgorithmController_py - 2018.03.28 at 03h 40m 09s.xml">
+      <configuration name="Unittests in TestAlgorithmController.py" configurationId="tests" />
     </history-entry>
-    <history-entry file="Unittests_in_TestFileController_py - 2018.03.27 at 03h 17m 11s.xml">
-      <configuration name="Unittests in TestFileController.py" configurationId="tests" />
+    <history-entry file="Unittests_in_TestAlgorithmController_py - 2018.03.28 at 03h 40m 33s.xml">
+      <configuration name="Unittests in TestAlgorithmController.py" configurationId="tests" />
     </history-entry>
-    <history-entry file="Unittests_in_TestFileController_py - 2018.03.27 at 03h 17m 30s.xml">
-      <configuration name="Unittests in TestFileController.py" configurationId="tests" />
+    <history-entry file="Unittests_in_TestAlgorithmController_py - 2018.03.28 at 03h 40m 45s.xml">
+      <configuration name="Unittests in TestAlgorithmController.py" configurationId="tests" />
     </history-entry>
-    <history-entry file="Unittests_in_TestInstanceController_py - 2018.03.27 at 02h 57m 22s.xml">
-      <configuration name="Unittests in TestInstanceController.py" configurationId="tests" />
+    <history-entry file="Unittests_in_TestAlgorithmController_py - 2018.03.28 at 03h 41m 53s.xml">
+      <configuration name="Unittests in TestAlgorithmController.py" configurationId="tests" />
     </history-entry>
-    <history-entry file="Unittests_in_TestInstanceController_py - 2018.03.27 at 02h 58m 19s.xml">
-      <configuration name="Unittests in TestInstanceController.py" configurationId="tests" />
+    <history-entry file="Unittests_in_TestAlgorithmController_py - 2018.03.28 at 03h 42m 29s.xml">
+      <configuration name="Unittests in TestAlgorithmController.py" configurationId="tests" />
     </history-entry>
-    <history-entry file="Unittests_in_TestInstanceController_py - 2018.03.27 at 03h 03m 36s.xml">
-      <configuration name="Unittests in TestInstanceController.py" configurationId="tests" />
+    <history-entry file="Unittests_in_TestAlgorithmController_py - 2018.03.28 at 04h 10m 55s.xml">
+      <configuration name="Unittests in TestAlgorithmController.py" configurationId="tests" />
     </history-entry>
-    <history-entry file="Unittests_in_TestInstanceController_py - 2018.03.27 at 03h 05m 14s.xml">
-      <configuration name="Unittests in TestInstanceController.py" configurationId="tests" />
+    <history-entry file="Unittests_in_TestAlgorithmController_py - 2018.03.28 at 04h 17m 20s.xml">
+      <configuration name="Unittests in TestAlgorithmController.py" configurationId="tests" />
     </history-entry>
   </component>
   <component name="TodoView">
@@ -398,14 +470,12 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="-11" y="-11" width="1942" height="1042" extended-state="7" />
-    <editor active="true" />
+    <frame x="-11" y="-11" width="1942" height="1042" extended-state="6" />
     <layout>
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.3288337" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.35259178" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32897863" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.36460808" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.44655582" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Python Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
@@ -418,6 +488,7 @@
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
     </layout>
     <layout-to-restore>
@@ -446,123 +517,17 @@
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
-      <option name="time" value="1" />
+      <option name="time" value="2" />
     </breakpoint-manager>
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/models/data/BuildingModel.py" />
-    <entry file="file://$PROJECT_DIR$/controllers/AlgorithmController.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="8370">
-          <caret line="316" column="0" lean-forward="false" selection-start-line="316" selection-start-column="0" selection-end-line="316" selection-end-column="0" />
-          <folding>
-            <element signature="e#21#32#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/main.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="81">
-          <caret line="5" column="25" lean-forward="false" selection-start-line="5" selection-start-column="25" selection-end-line="5" selection-end-column="25" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/files/result.txt" />
-    <entry file="file://$PROJECT_DIR$/main.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/controllers/InstanceController.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1458">
-          <caret line="54" column="28" lean-forward="false" selection-start-line="54" selection-start-column="28" selection-end-line="54" selection-end-column="28" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/models/ant/AntModel.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="50" lean-forward="false" selection-start-line="0" selection-start-column="50" selection-end-line="0" selection-end-column="50" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/models/ant/SolutionModel.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="189">
-          <caret line="7" column="41" lean-forward="false" selection-start-line="7" selection-start-column="41" selection-end-line="7" selection-end-column="41" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/main.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/controllers/InstanceController.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1323">
-          <caret line="54" column="28" lean-forward="true" selection-start-line="54" selection-start-column="28" selection-end-line="54" selection-end-column="28" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/models/ant/SolutionModel.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="189">
-          <caret line="7" column="41" lean-forward="false" selection-start-line="7" selection-start-column="41" selection-end-line="7" selection-end-column="41" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/models/ant/AntModel.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="50" lean-forward="false" selection-start-line="0" selection-start-column="50" selection-end-line="0" selection-end-column="50" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/models/__init__.py" />
-    <entry file="file://$PROJECT_DIR$/models/data.py" />
-    <entry file="file://D:/python 3.6.2/Lib/site-packages/matplotlib/units.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="176">
-          <caret line="160" column="0" lean-forward="false" selection-start-line="160" selection-start-column="0" selection-end-line="160" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://F:/La Vie en France/Polytech/作业/Python TP - BI Peng &amp; ZENG Kai/Les codes/TP4/Q4.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="324">
-          <caret line="19" column="152" lean-forward="true" selection-start-line="19" selection-start-column="124" selection-end-line="19" selection-end-column="152" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/tests/__init__.py" />
     <entry file="file://$PROJECT_DIR$/files/result.txt" />
     <entry file="file://$PROJECT_DIR$/files/qulity.txt" />
     <entry file="file://D:/python 3.6.2/Lib/site-packages/numpy/ma/core.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="166">
           <caret line="2387" column="0" lean-forward="false" selection-start-line="2387" selection-start-column="0" selection-end-line="2387" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/files/Rq33_187CareMoveID188.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="135">
-          <caret line="5" column="31" lean-forward="false" selection-start-line="5" selection-start-column="31" selection-end-line="5" selection-end-column="31" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/files/Rq22_51760B_TriCrOID_TriNSACr4.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2700">
-          <caret line="100" column="4" lean-forward="false" selection-start-line="100" selection-start-column="4" selection-end-line="100" selection-end-column="4" />
         </state>
       </provider>
     </entry>
@@ -575,20 +540,10 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/models/bb/__init__.py" />
     <entry file="file://$PROJECT_DIR$/__init__.py" />
-    <entry file="file://$PROJECT_DIR$/models/ant/__init__.py" />
     <entry file="file://$PROJECT_DIR$/models/ant/AntModel.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="19" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/models/ant/SolutionModel.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="351">
-          <caret line="13" column="81" lean-forward="true" selection-start-line="13" selection-start-column="8" selection-end-line="13" selection-end-column="81" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -596,7 +551,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="270">
           <caret line="13" column="81" lean-forward="true" selection-start-line="13" selection-start-column="8" selection-end-line="13" selection-end-column="81" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -604,7 +558,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="198">
           <caret line="13" column="77" lean-forward="true" selection-start-line="13" selection-start-column="21" selection-end-line="13" selection-end-column="77" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -612,7 +565,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="324">
           <caret line="17" column="80" lean-forward="true" selection-start-line="17" selection-start-column="8" selection-end-line="17" selection-end-column="80" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -620,7 +572,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="351">
           <caret line="15" column="81" lean-forward="true" selection-start-line="15" selection-start-column="8" selection-end-line="15" selection-end-column="81" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -628,7 +579,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="297">
           <caret line="15" column="80" lean-forward="true" selection-start-line="15" selection-start-column="8" selection-end-line="15" selection-end-column="80" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -636,23 +586,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-45">
           <caret line="5" column="36" lean-forward="true" selection-start-line="5" selection-start-column="36" selection-end-line="5" selection-end-column="36" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/controllers/ProbabilityController.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1350">
-          <caret line="50" column="52" lean-forward="true" selection-start-line="50" selection-start-column="52" selection-end-line="50" selection-end-column="52" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/tests/unitTest/TestProbabilityController.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="513">
-          <caret line="20" column="0" lean-forward="true" selection-start-line="20" selection-start-column="0" selection-end-line="20" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -660,52 +593,179 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="166">
           <caret line="681" column="0" lean-forward="false" selection-start-line="681" selection-start-column="0" selection-end-line="681" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/files/solution_test.txt" />
+    <entry file="file://$PROJECT_DIR$/files/bestSolution_test.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/models/ant/SolutionModel.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="432">
+          <caret line="16" column="26" lean-forward="false" selection-start-line="16" selection-start-column="13" selection-end-line="16" selection-end-column="26" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/controllers/AlgorithmController.py">
+    <entry file="file://$PROJECT_DIR$/tests/functionalTest/TestSolution.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="19" />
-          <folding>
-            <element signature="e#21#32#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="590">
+          <caret line="43" column="0" lean-forward="false" selection-start-line="43" selection-start-column="0" selection-end-line="45" selection-end-column="26" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/tests/unitTest/TestInstanceController.py">
+    <entry file="file://D:/python 3.6.2/Lib/site-packages/pip/compat/__init__.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="297">
-          <caret line="11" column="0" lean-forward="true" selection-start-line="11" selection-start-column="0" selection-end-line="11" selection-end-column="0" />
-          <folding>
-            <element signature="e#21#36#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="135">
+          <caret line="74" column="34" lean-forward="false" selection-start-line="74" selection-start-column="29" selection-end-line="74" selection-end-column="34" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://D:/python 3.6.2/Lib/site-packages/memory_profiler.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1919">
+          <caret line="1127" column="48" lean-forward="false" selection-start-line="1127" selection-start-column="48" selection-end-line="1127" selection-end-column="48" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/tests/__init__.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/tests/PerformanceTest/__init__.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/tests/PerformanceTest/MemoryProfilerAlgorithmController.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/models/__init__.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/models/ant/__init__.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/models/data/__init__.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/models/instance/__init__.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/models/pheromone/__init__.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/tests/functionalTest/__init__.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/controllers/__init__.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/tests/functionalTest/TestParameters.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-4">
+          <caret line="0" column="24" lean-forward="false" selection-start-line="0" selection-start-column="7" selection-end-line="0" selection-end-column="24" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/tests/unitTest/__init__.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/controllers/FileController.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="54">
+          <caret line="120" column="148" lean-forward="true" selection-start-line="120" selection-start-column="63" selection-end-line="120" selection-end-column="148" />
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/controllers/InstanceController.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="609">
-          <caret line="123" column="37" lean-forward="true" selection-start-line="123" selection-start-column="37" selection-end-line="123" selection-end-column="37" />
+        <state relative-caret-position="-353">
+          <caret line="64" column="40" lean-forward="true" selection-start-line="64" selection-start-column="32" selection-end-line="64" selection-end-column="40" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/tests/unitTest/TestAlgorithmController.py">
+    <entry file="file://$PROJECT_DIR$/tests/PerformanceTest/TestProfilerForAllocateBuilding.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="27">
-          <caret line="94" column="0" lean-forward="true" selection-start-line="94" selection-start-column="0" selection-end-line="94" selection-end-column="0" />
-          <folding>
-            <element signature="e#21#36#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="214">
+          <caret line="44" column="32" lean-forward="true" selection-start-line="44" selection-start-column="32" selection-end-line="44" selection-end-column="32" />
+          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/files/LOD9679120_IdNet_NSACr3.txt">
+    <entry file="file://$PROJECT_DIR$/tests/PerformanceTest/TestProfilerForChooseCare.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-12731">
-          <caret line="16" column="0" lean-forward="false" selection-start-line="16" selection-start-column="0" selection-end-line="16" selection-end-column="25" />
+        <state relative-caret-position="189">
+          <caret line="43" column="32" lean-forward="false" selection-start-line="43" selection-start-column="32" selection-end-line="43" selection-end-column="32" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/controllers/ProbabilityController.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-216">
+          <caret line="37" column="27" lean-forward="false" selection-start-line="37" selection-start-column="8" selection-end-line="37" selection-end-column="27" />
           <folding />
         </state>
       </provider>
@@ -718,44 +778,70 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/files/bestSolution.txt">
+    <entry file="file://$PROJECT_DIR$/tests/unitTest/TestProbabilityController.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="135">
-          <caret line="5" column="5" lean-forward="false" selection-start-line="5" selection-start-column="5" selection-end-line="5" selection-end-column="5" />
+        <state relative-caret-position="243">
+          <caret line="21" column="51" lean-forward="true" selection-start-line="21" selection-start-column="51" selection-end-line="21" selection-end-column="51" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/files/solution_test.txt">
+    <entry file="file://$PROJECT_DIR$/tests/unitTest/TestInstanceController.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        <state relative-caret-position="-378">
+          <caret line="55" column="32" lean-forward="false" selection-start-line="55" selection-start-column="32" selection-end-line="55" selection-end-column="32" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/tests/unitTest/TestFileController.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="702">
-          <caret line="26" column="45" lean-forward="false" selection-start-line="26" selection-start-column="45" selection-end-line="26" selection-end-column="45" />
-          <folding>
-            <element signature="e#21#36#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/controllers/FileController.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="117">
-          <caret line="108" column="113" lean-forward="false" selection-start-line="108" selection-start-column="31" selection-end-line="108" selection-end-column="113" />
+        <state relative-caret-position="183">
+          <caret line="58" column="47" lean-forward="false" selection-start-line="58" selection-start-column="47" selection-end-line="58" selection-end-column="52" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/tests/functionalTest/TestSolution.py">
+    <entry file="file://$PROJECT_DIR$/controllers/AlgorithmController.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="252">
-          <caret line="43" column="0" lean-forward="false" selection-start-line="43" selection-start-column="0" selection-end-line="45" selection-end-column="26" />
+        <state relative-caret-position="-216">
+          <caret line="624" column="93" lean-forward="false" selection-start-line="624" selection-start-column="21" selection-end-line="624" selection-end-column="99" />
+          <folding>
+            <element signature="e#21#32#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../PRD_copy/PRD给care加了候选列表/PRD/main.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <element signature="e#0#11#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/files/Rq22_51760B_TriCrOID_TriNSACr4.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-731">
+          <caret line="13" column="4" lean-forward="false" selection-start-line="13" selection-start-column="0" selection-end-line="13" selection-end-column="4" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/tests/unitTest/TestAlgorithmController.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-141">
+          <caret line="186" column="54" lean-forward="false" selection-start-line="186" selection-start-column="13" selection-end-line="186" selection-end-column="54" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/files/bestSolution.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="27">
+          <caret line="13" column="10" lean-forward="true" selection-start-line="13" selection-start-column="10" selection-end-line="13" selection-end-column="10" />
           <folding />
         </state>
       </provider>
@@ -763,23 +849,39 @@
     <entry file="file://$PROJECT_DIR$/files/quality.txt">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="27">
-          <caret line="1" column="48" lean-forward="true" selection-start-line="1" selection-start-column="4" selection-end-line="1" selection-end-column="6" />
+          <caret line="1" column="15" lean-forward="false" selection-start-line="1" selection-start-column="15" selection-end-line="1" selection-end-column="15" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/tests/functionalTest/TestParameters.py">
+    <entry file="file://$PROJECT_DIR$/tests/PerformanceTest/ProfilerAlgorithmController.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="216">
-          <caret line="18" column="66" lean-forward="false" selection-start-line="18" selection-start-column="66" selection-end-line="18" selection-end-column="66" />
+        <state relative-caret-position="102">
+          <caret line="295" column="28" lean-forward="true" selection-start-line="295" selection-start-column="28" selection-end-line="295" selection-end-column="28" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/files/LOD9679120_IdNet_NSACr3.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="432">
+          <caret line="16" column="0" lean-forward="false" selection-start-line="16" selection-start-column="0" selection-end-line="16" selection-end-column="25" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/files/Rq33_187CareMoveID188.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-2">
+          <caret line="10" column="28" lean-forward="true" selection-start-line="10" selection-start-column="28" selection-end-line="10" selection-end-column="28" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/main.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="171">
-          <caret line="14" column="0" lean-forward="true" selection-start-line="14" selection-start-column="0" selection-end-line="14" selection-end-column="0" />
+        <state relative-caret-position="270">
+          <caret line="11" column="14" lean-forward="true" selection-start-line="11" selection-start-column="14" selection-end-line="11" selection-end-column="14" />
           <folding />
         </state>
       </provider>

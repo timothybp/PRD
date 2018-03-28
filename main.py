@@ -9,8 +9,8 @@ if __name__ == '__main__':
     programStartTime = time.time()
     print('Programme Start...')
 
-    antQuantity = 30 # Le nombre de fourmis est de 50
-    iterationTimes = 500  # La fois d'itération est de 300
+    antQuantity = 50 # Le nombre de fourmis est de 50
+    iterationTimes = 1000  # La fois d'itération est de 300
     careEffectRadius = 3000 # Le rayon d'effect initial de chaque care est de 3000m
 
     buildingFileName = 'files/Rq22_51760B_TriCrOID_TriNSACr4.txt' # Le nom du fichier "bâtiment"

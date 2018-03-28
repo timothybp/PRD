@@ -6,9 +6,9 @@ from models.ant.SolutionModel import SolutionModel
 import random
 import copy
 
-class AlgorithmController:
+class ProfilerAlgorithmController:
     '''
-    Description: cette classe est le contrôleur d'algorithme, qui réalise à chercher la meilleure solution d'affection
+    Description: cette classe est le controleur d'algorthime avec l'annotation de profile
     Attributs:
         instance: (l'objet de la classe InstanceModel) l'instance préparée par la classe InstanceControleur,
                     y compris la liste de bâtiments，la liste de cares, la liste de phéromones sur les nœuds de bâtiment,
@@ -104,6 +104,7 @@ class AlgorithmController:
         self.bestSolution = bestSolutionForEachIterationList[bestSolutionIndex]
 
 
+    @profile
     def allocateBuilding(self, ant,copyDistanceSortedBuildingIndexMatrix, solutionForOneIterationList,qualityOfSolutionForOneIterationList):
         '''
         Description: cette méthode est pour sélectionner les bâtiments à affecter
@@ -294,7 +295,7 @@ class AlgorithmController:
         # ajouter la solution dans la liste solutionForOneIterationList
         solutionForOneIterationList.append(ant.solution)
 
-
+    @profile
     def chooseCare(self, buidlingToAllocateIndex, buildingToAllocateList, careToFillList, isCareFullList, solution):
         '''
         Description: cette méthode est pour sélectionner les cares à remplir
@@ -388,7 +389,7 @@ class AlgorithmController:
 
     def sortBuildingIndexForEachCareInDistanceMatrix(self):
         '''
-        Description: cette méthode est pour trier les indices de bâtiments pour chaque care en référant la matrice de distance
+        Description: cette méthode est pour trié les indices de bâtiments pour chaque care en référant la matrice de distance
         :return: (int[][]) la matrice de indices de bâtiments trié
         '''
 
@@ -428,7 +429,7 @@ class AlgorithmController:
 
     def merge_sort(self, distanceList, distanceIndexList):
         '''
-        Description: cette méthode est pour trier une liste d'indice de bâtiments en référant la matrice de distance
+        Description: cette méthode est pour trier une liste d'indice de bâtiments en référant la liste de distance
                         avec la trie par fusion
         :param distanceList: (float[][]) la liste de distance à référer
         :param distanceIndexList: (int[][]) la liste d'indice de bâtiment à trier
@@ -570,7 +571,7 @@ class AlgorithmController:
     def calculateAverageSolutionQualityForEachIteration(self,qualityOfSolutionForOneIterationList):
         '''
         Description: cette méthode est pour calculer la qualité moyenne des solutions générées par chaque fourmi dans une itération
-        :param qualityOfSolutionForOneIterationList: (float[]) la liste de qualités de chaque solution d'une itération
+        :param qualityOfSolutionForOneIterationList: (float[]) la liste de qualités de chaque solution
         :return: average: (float) la qualité moyenne des solutions
         '''
         sum = 0.00

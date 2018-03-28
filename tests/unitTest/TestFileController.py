@@ -54,9 +54,13 @@ class TestFileController(unittest.TestCase):
         qualityFileName = '../../files/quality_test.txt'
         bestQualityOfEachIterationList = [0.1477832512315271,0.09865470852017937]
         averageQualityOfEachIterationList = [0.07858062847465425, 0.05374583753472586]
-
+        distanceTotalOfEachIterationList = [100,200]
+        populationAllocatedOfEachIterationList = [25,30]
+        buildingAllocatedOfEachIterationList = [4,5]
         fc = FileController()
-        fc.writeQualityFile(qualityFileName, bestQualityOfEachIterationList, averageQualityOfEachIterationList)
+        fc.writeQualityFile(qualityFileName, bestQualityOfEachIterationList,
+                            averageQualityOfEachIterationList,distanceTotalOfEachIterationList,
+                            populationAllocatedOfEachIterationList, buildingAllocatedOfEachIterationList)
 
 
 if __name__ == '__main__':

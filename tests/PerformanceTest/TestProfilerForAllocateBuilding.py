@@ -1,30 +1,19 @@
 #-*-coding:utf-8-*-
 
-import unittest
-from controllers.InstanceController import InstanceController
+from tests.PerformanceTest.ProfilerAlgorithmController import ProfilerAlgorithmController
 from models.instance.InstanceModel import InstanceModel
 from models.data.BuildingModel import BuildingModel
 from models.data.CareModel import CareModel
+from models.ant.SolutionModel import SolutionModel
 from models.ant.AntModel import AntModel
 from models.pheromone.PheromoneEdge import PheromoneEdge
 from models.pheromone.PheromoneNode import PheromoneNode
+import copy
 
 
-class TestInstanceController(unittest.TestCase):
+class TestProfilerForAllocateBuilding:
 
-    def test_constructInstance(self):
-        antQuantity = 10
-        buildingFileName = '../../files/Rq22_51760B_TriCrOID_TriNSACr4.txt'
-        careFileName = '../../files/Rq33_187CareMoveID188.txt'
-        distanceFileName = '../../files/LOD9679120_IdNet_NSACr3.txt'
-
-        ic = InstanceController()
-        ic.constructInstance(antQuantity, buildingFileName, careFileName, distanceFileName)
-        self.assertTrue(len(ic.instance.buildingList) == 50 and len(ic.instance.careList) == 10 and
-                        len(ic.instance.distanceMatrix) == 50 and len(ic.instance.distanceMatrix[0]) == 10 and
-                        len(ic.instance.antList) == 10)
-
-    def test_solveProblem(self):
+    def build_instance(self):
         instance = InstanceModel()
         instance.distanceMatrix = [[10, 20, 30, 15, 5, 20, 30],
                                    [30, 20, 15, 20, 15, 10, 5],
@@ -75,10 +64,23 @@ class TestInstanceController(unittest.TestCase):
 
         instance.antList = [AntModel(), AntModel(), AntModel(), AntModel(), AntModel()]
 
-        ic = InstanceController()
-        ic.instance = instance
+        return instance
 
-        ic.solveProblem(200, 3000, "../../files/bestSolution_test.txt", "../../files/quality_test.txt")
+    def test_allocateBuilding(self):
+        instance = self.build_instance()
+
+        solution = SolutionModel()
+
+        pac = ProfilerAlgorithmController(instance, 3000)
+        distanceSortedBuildingIndexMatrix = pac.sortBuildingIndexForEachCareInDistanceMatrix()
+        ant = AntModel()
+        solution.solutionArray = [-1, -1, -1, -1, -1, -1, -1]
+        solutionForOneIterationList = []
+        qualityOfSolutionForOneIterationList = []
+        copyDistanceSortedBuildingIndexMatrix = copy.deepcopy(distanceSortedBuildingIndexMatrix)
+        pac.allocateBuilding(ant, copyDistanceSortedBuildingIndexMatrix, solutionForOneIterationList,
+                            qualityOfSolutionForOneIterationList)
 
 if __name__ == '__main__':
-    unittest.main()
+    profilerAllocateBuilding = TestProfilerForAllocateBuilding()
+    profilerAllocateBuilding.test_allocateBuilding()

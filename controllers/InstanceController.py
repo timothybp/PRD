@@ -122,15 +122,26 @@ class InstanceController:
         algorithmCtrl = AlgorithmController(self.instance,careEffectRadius)
 
         # appeler la méthode "run()" de la classe AlgorithmController pour commencer à résoudre le problème
-        bestQualityOfSolutionForEachIterationList, averageQualityOfSolutionForEachIterationList = \
-            algorithmCtrl.run(iterationTimes)
+        algorithmCtrl.run(iterationTimes)
 
         # obtenir la meilleure solution
         bestSolution = algorithmCtrl.bestSolution
+        # obtenir la liste de qualités de meilleure solution de chaque itération
+        bestQualityOfSolutionForEachIterationList = algorithmCtrl.bestQualityOfSolutionForEachIterationList
+        # obtenir la liste de qualités moyenne des soltuons de chaque itération
+        averageQualityOfSolutionForEachIterationList = algorithmCtrl.averageQualityOfSolutionForEachIterationList
+        # obtenir la liste de distance totale de la meilleure solution de chaque itération
+        distanceTotalOfBestSolutionForEachIterationList = algorithmCtrl.distanceTotalOfBestSolutionForEachIterationList
+        # obtenir la liste de sans-abris totaux hébergés de la meilleure solution de chaque itération
+        populationAllocatedOfBestSolutionForEachIterationList = algorithmCtrl.populationAllocatedOfBestSolutionForEachIterationList
+        # obtenir la liste de nombre de bâtiments affectés de la meilleure solution de chaque itération
+        buildingAllocatedOfBestSolutionForEachIterationList = algorithmCtrl.buildingAllocatedOfBestSolutionForEachIterationList
 
         fileCtrl = FileController()
         # écrire la meilleure solution dans le fichier de solution
         fileCtrl.writeSolutionFile(solutionFileName, bestSolution, self.instance)
         # écrire les quantités des meiileures solutions et les quantités moyennes des solutions de chaque itération
         # dans le fichier de qualité
-        fileCtrl.writeQualityFile(qualityFileName, bestQualityOfSolutionForEachIterationList, averageQualityOfSolutionForEachIterationList)
+        fileCtrl.writeQualityFile(qualityFileName, bestQualityOfSolutionForEachIterationList, averageQualityOfSolutionForEachIterationList,
+                                  distanceTotalOfBestSolutionForEachIterationList, populationAllocatedOfBestSolutionForEachIterationList,
+                                  buildingAllocatedOfBestSolutionForEachIterationList)

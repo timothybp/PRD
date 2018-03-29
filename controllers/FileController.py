@@ -1,16 +1,33 @@
 #-*-coding:utf-8-*-
 
+'''
+Description:
+    Ce fichier est le script du contrôleur de fichier, y compris la lecture de fichier
+    de bâtiment， de fichier de care, de fichier de distance et de fichier de paramètre
+    pour le programme，l'écriture de fichier de solution et de fichier de qualité
+
+Version: 1.0
+
+Auteur: Peng BI
+'''
+
+import json
 
 class FileController:
     '''
-    Description: cette classe est le controleur de fichier, y compris la lecture et l'écriture
+    Description:
+        Cette classe est le contrôleur de fichier, y compris la lecture et l'écriture
+
     Attribut: rien
     '''
 
     def readBuildingFile(self,buildingFilename):
         '''
-        Description: cette méthode est pour lire le fichier de bâtiment
+        Description:
+            Cette méthode est pour lire le fichier de bâtiment
+
         :param buildingFilename: (String) le nom du fichier de bâtiment
+
         :return: buildingContentList: (String[]) la liste de lignes du fichier de bâtiment
         '''
 
@@ -29,8 +46,11 @@ class FileController:
 
     def readCareFile(self, careFilename):
         '''
-        Description: cette méthode est pour lire le fichier de centre d'accueil(care)
+        Description:
+            Cette méthode est pour lire le fichier de centre d'accueil(care)
+
         :param careFilename: (String) le nom du fichier care
+
         :return: careContentList: (String[]) la liste de lignes du fichier de care
         '''
 
@@ -49,8 +69,11 @@ class FileController:
 
     def readDistanceFile(self, distanceFilename):
         '''
-        Description: cette méthode est pour lire le fichier de distance
+        Description:
+            Cette méthode est pour lire le fichier de distance
+
         :param distanceFilename: (String) le nom du fichier distance
+
         :return: distanceContentList: (String[]) la liste de lignes du fichier de distance
         '''
 
@@ -67,12 +90,32 @@ class FileController:
         return distanceContentList
 
 
+    def readConfigurationFile(self,configFileName):
+        '''
+        Description:
+            Cette méthode est pour lire le fichier de configuration des paramètres définies par l'utilisateur
+
+        :param configFileName: (String) le nom du fichier configuration des paramètres
+
+        :return: configJson: (l'objet de JSON) les valeurs des paramètres configurées par l'utilisateur
+        '''
+
+        fileObj = open(configFileName, encoding='utf-8')
+        configJson = json.load(fileObj)
+        fileObj.close()
+
+        return configJson
+
+
     def writeSolutionFile(self, solutionFilename, bestSolution, instance):
         '''
-        Description: cette méthode est pour écrire la meilleure solutions dans le fichier de solution
+        Description:
+            Cette méthode est pour écrire la meilleure solution dans le fichier de solution
+
         :param solutionFilename: (String) le nom du fichier de solution
-        :param bestSolution: (l'object de la classe de SolutionModel) la meilleure solutions
-        :param instance: (l'objet de la classe de InstanceModel) l'instance pour ce projet
+        :param bestSolution: (l'object de la classe de SolutionModel) la meilleure solution
+        :param instance: (l'objet de la classe de InstanceModel) l'instance pour le programme
+
         :return: rien
         '''
 
@@ -110,15 +153,18 @@ class FileController:
                          averageQualityOfEachIterationList,distanceTotalOfEachIterationList,
                          populationAllocatedOfEachIterationList, buildingAllocatedOfEachIterationList):
         '''
-        Description: cette méthode est pour écrire les qualités des meilleures solutions de chaque itération et
-                        les qualités moyennes des solutions de chaque itération, la distance totale et le nombre
-                        de sans-abris hébergés ainsi que le nombre de bâtiments affectés de chaque itération
-                        dans le fichier de qualité
+        Description:
+            cette méthode est pour écrire les qualités des meilleures solutions de
+            chaque itération et les qualités moyennes des solutions de chaque itération,
+            la distance totale et le nombre de sans-abris hébergés ainsi que le nombre
+            de bâtiments affectés de chaque itération dans le fichier de qualité
+
         :param bestQualityOfEachIterationList: (float[]) la liste de qualités des meilleures solutions de chaque itération
         :param averageQualityOfEachIterationList: (float[]) la liste de qualités moyennes de solutions de chaque itération
         :param distanceTotalOfEachIterationList: (float[]) la liste de distance totale de la meilleure solution de chaque itération
         :param populationAllocatedOfEachIterationList: (float[]) la liste de sans-abris totaux hébergés de la meilleure solution de chaque itération
         :param buildingAllocatedOfEachIterationList: (float[]) la liste de nombre de bâtiments affectés de la meilleure solution de chaque itération
+
         :return: rien
         '''
 

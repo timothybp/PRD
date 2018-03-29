@@ -1,26 +1,40 @@
 #-*-coding:utf-8-*-
 
-from models.instance.InstanceModel import InstanceModel
-from models.data.BuildingModel import BuildingModel
-from models.data.CareModel import CareModel
-from models.pheromone.PheromoneNode import PheromoneNode
-from models.pheromone.PheromoneEdge import PheromoneEdge
-from models.ant.AntModel import AntModel
+'''
+Description:
+    Ce fichier est le script du contrôleur d'instance, qui sert à construire l'instance pour le programme,
+    et fournir un service pour démarrer l'algorithme et pour enregistrer les résultats dans les fichiers
+
+Version: 1.0
+
+Auteur: Peng BI
+'''
+
+import time
+
 from controllers.AlgorithmController import AlgorithmController
 from controllers.FileController import FileController
-import time
+from models.antAlgorithm.AntModel import AntModel
+from models.antAlgorithm.PheromoneEdge import PheromoneEdge
+from models.antAlgorithm.PheromoneNode import PheromoneNode
+from models.data.BuildingModel import BuildingModel
+from models.data.CareModel import CareModel
+from models.instance.InstanceModel import InstanceModel
 
 
 class InstanceController:
     '''
-    Description: cette classe est la controleur de instance de projet
+    Description:
+        Cette classe est le contrôleur d'instance de projet
+
     Attribut:
         instance: (l'objet de la classe InstanceModel) l'instance pour ce projet
     '''
 
     def __init__(self):
         '''
-        Description: cette méthode est le constructeur de la classe InstanceController
+        Description:
+            Cette méthode est le constructeur de la classe InstanceController
         '''
 
         self.instance = InstanceModel() # (l'objet de la classe InstanceModel) l'instance pour ce projet
@@ -28,11 +42,14 @@ class InstanceController:
 
     def constructInstance(self,antQuantity, buildingFileName,careFileName, distanceFileName):
         '''
-        Description: cette classe est pour construire l'instance de projet
+        Description:
+            Cette méthode est pour construire l'instance de projet
+
         :param antQuantity: (int) le nombre de fourmis
         :param buildingFileName: (String) le nom du fichier de bâtiment
         :param careFileName: (String) le nom du fichier de care
         :param distanceFileName: (String) le nom du fichier de distance
+
         :return: rien
         '''
 
@@ -112,10 +129,17 @@ class InstanceController:
 
     def solveProblem(self,iterationTimes, careEffectRadius, solutionFileName, qualityFileName):
         '''
-        Description: cette méthode fournit la service de résoudre le problème
+        Description:
+            Cette méthode fournit la service de résoudre le problème
+
         :param iterationTimes: (int) la fois d'itération
         :param careEffectRadius: (int) le rayon d'attraction initial pour les cares
-        :param solutionFileName: le nom du fichier de solution qui enregistre la meilleure solution à la fin
+        :param solutionFileName: （String) le nom du fichier de solution qui enregistre la meilleure solution à la fin
+        :param qualityFileName: (String) le nom du fichier de qualités qui contient les qualités des meilleures
+                                 solutions de chaque itération et les qualités moyennes des solutions de chaque
+                                 itération, la distance totale et le nombre de sans-abris hébergés ainsi que le
+                                 nombre de bâtiments affectés de chaque itération
+
         :return: rien
         '''
 

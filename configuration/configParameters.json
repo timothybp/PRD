@@ -1,0 +1,11 @@
+{
+    "antQuantity": 50,
+    "iterationTimes": 10,
+    "careEffectRadius": 3000,
+    "buildingFileName": "files/Rq22_51760B_TriCrOID_TriNSACr4.txt",
+    "careFileName": "files/Rq33_187CareMoveID188.txt",
+    "distanceFileName": "files/LOD9679120_IdNet_NSACr3.txt",
+    "solutionFileName": "files/bestSolution.txt",
+    "qualityFileName": "files/quality.txt"
+}
+

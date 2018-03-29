@@ -1,20 +1,32 @@
 #-*-coding:utf-8-*-
 
+'''
+Description:
+    Ce fichier est le script du contrôleur d'algiruthme, qui contient l'affectation de bâtiment et la sélection de centre d'accueil
+
+Version: 1.0
+
+Auteur: Peng BI
+'''
+
 import time
 from controllers.ProbabilityController import ProbabilityController
-from models.ant.SolutionModel import SolutionModel
+from models.antAlgorithm.SolutionModel import SolutionModel
 import random
 import copy
 
 class AlgorithmController:
     '''
-    Description: cette classe est le contrôleur d'algorithme, qui réalise à chercher la meilleure solution d'affection
+    Description:
+        Cette classe est le contrôleur d'algorithme, qui réalise à chercher la meilleure solution d'affection
+
     Attributs:
-        instance: (l'objet de la classe InstanceModel) l'instance préparée par la classe InstanceControleur,
-                    y compris la liste de bâtiments，la liste de cares, la liste de phéromones sur les nœuds de bâtiment,
-                    la matrice de phéromones sur les arcs entre le bâtiment et le care，la liste de fourmis
+        instance: (l'objet de la classe InstanceModel) l'instance préparée par la classe
+                  InstanceControleur,y compris la liste de bâtiments，la liste de cares,
+                  la liste de phéromones sur les nœuds de bâtiment, la matrice de phéromones
+                  sur les arcs entre le bâtiment et le care，la liste de fourmis
         bestSolution: (l'objet de la classe SolutionModel) la meilleure solution trouvé finalement
-        careEffectRadius: (int) le rayon d'attraction initial de circle dont le centre est chaque care
+        careEffectRadius: (int) le rayon d'attraction initial de cercle dont le centre est chaque care
         bestQualityOfSolutionForEachIterationList: (float[]) la liste de qualités de meilleure solution de chaque itération
         averageQualityOfSolutionForEachIterationList: (float[]) la liste de qualités moyenne des soltuons de chaque itération
         distanceTotalOfBestSolutionForEachIterationList: (float[]) la liste de distance totale de la meilleure solution de chaque itération
@@ -24,11 +36,13 @@ class AlgorithmController:
 
     def __init__(self, instance, careEffectRadius):
         '''
-        Description: cette méthode est le constructeur de la classe AlgorithmeControlleur
-        :param instance: (l'objet de la classe InstanceModel) l'instance de programme,
-                            qui est préparée par la classe InstanceControleur
-        :param careEffectRadius: (int) le rayon d'attraction initial de chaque care, qui est définit par l'utilisateur
-                                    dans le script main.py
+        Description:
+            cette méthode est le constructeur de la classe AlgorithmeControlleur
+
+        :param instance: (l'objet de la classe InstanceModel) l'instance de
+                          programme,qui est préparée par la classe InstanceControleur
+        :param careEffectRadius: (int) le rayon d'attraction initial de chaque care, qui
+                                  est définit par l'utilisateur dans le script main.py
         '''
 
         self.instance = instance    # (l'objet de la classe InstanceModel) l'instance préparée par la classe InstanceControleur
@@ -40,11 +54,15 @@ class AlgorithmController:
         self.populationAllocatedOfBestSolutionForEachIterationList = []  # (float[]) la liste de sans-abris totaux hébergés de la meilleure solution de chaque itération
         self.buildingAllocatedOfBestSolutionForEachIterationList = []  # (float[]) la liste de nombre de bâtiments affectés de la meilleure solution de chaque itération
 
+
     def run(self, iterationTimes):
         '''
-        Description: cette méthode est l'entrèe de l'algorithme, et synthétise les solutions génèrèe par chaque fourmi
-                        dans chaque itération, et obtenir la meilleure solution
+        Description:
+            Cette méthode est l'entrée de l'algorithme, et synthétise les solutions générée
+            par chaque fourmi dans chaque itération, et obtenir la meilleure solution
+
         :param iterationTimes: (int) la fois d'itérations
+
         :return rien
         '''
 
@@ -106,11 +124,15 @@ class AlgorithmController:
 
     def allocateBuilding(self, ant,copyDistanceSortedBuildingIndexMatrix, solutionForOneIterationList,qualityOfSolutionForOneIterationList):
         '''
-        Description: cette méthode est pour sélectionner les bâtiments à affecter
+        Description:
+            Cette méthode est pour sélectionner les bâtiments à affecter
+
         :param ant: (l'objet de la classe AntModel) un fourmi qui va chercher sa solution
-        :param copyDistanceSortedBuildingIndexMatrix: (int[][]) la matrice copièe d'indices de bâtiment référée la matrice de distance
+        :param copyDistanceSortedBuildingIndexMatrix: (int[][]) la matrice copiée d'indices
+                                                       de bâtiment référée la matrice de distance
         :param solutionForOneIterationList: (SolutionModel[]) la liste de solutions pour une itération
         :param qualityOfSolutionForOneIterationList: (float[]) la liste de qualités de solution pour une itération
+
         :return: rien
         '''
 
@@ -297,13 +319,16 @@ class AlgorithmController:
 
     def chooseCare(self, buidlingToAllocateIndex, buildingToAllocateList, careToFillList, isCareFullList, solution):
         '''
-        Description: cette méthode est pour sélectionner les cares à remplir
+        Description:
+            Cette méthode est pour sélectionner les cares à remplir
+
         :param buidlingToAllocateIndex: (int) l'indice de bâtiment sélectionné
         :param buildingToAllocateList: (BuildingModel[]) la liste de bâtiments
         :param careToFillList: (CareModel[]) la liste de care
         :param isCareFullList: (Boolean[]) la liste qui marque si le care est plein
         :param solution: (l'objet de la classe SolutionModel) la solution
-        :return: (boolean) une variable boolean qui signifie si tous les cares sont pleins
+        :return: (boolean) une variable booléen qui signifie si tous les cares sont pleins
+
         :return: careToFillIndex: (int) l'indice de care sélectionné
         '''
 
@@ -386,10 +411,14 @@ class AlgorithmController:
         else:
             return False,careToFillIndex
 
+
     def sortBuildingIndexForEachCareInDistanceMatrix(self):
         '''
-        Description: cette méthode est pour trier les indices de bâtiments pour chaque care en référant la matrice de distance
-        :return: (int[][]) la matrice de indices de bâtiments trié
+        Description:
+            Cette méthode est pour trier les indices de bâtiments
+            pour chaque care en référant la matrice de distance
+
+        :return: distanceSortedBuildingIndexMatrix: (int[][]) la matrice de indices de bâtiments triés
         '''
 
         print('Start to sort distance...')
@@ -413,7 +442,7 @@ class AlgorithmController:
             distanceIndexRow = copy.copy(distanceSortedBuildingIndexMatrix[indexCare])
 
             # appeler la méthode "merge_sort" pour faire le tri
-            distanceColumn, distanceIndexRow = self.merge_sort(distanceColumn, distanceIndexRow)
+            distanceColumn, distanceIndexRow = self.mergeSort(distanceColumn, distanceIndexRow)
             # mettre à jour la ligne triée dans la matrice distanceSortedBuildingIndexMatrix
             distanceSortedBuildingIndexMatrix[indexCare] = distanceIndexRow
             sortOneColumnEndTime = time.time()
@@ -426,14 +455,18 @@ class AlgorithmController:
 
         return distanceSortedBuildingIndexMatrix
 
-    def merge_sort(self, distanceList, distanceIndexList):
+
+    def mergeSort(self, distanceList, distanceIndexList):
         '''
-        Description: cette méthode est pour trier une liste d'indice de bâtiments en référant la matrice de distance
-                        avec la trie par fusion
-        :param distanceList: (float[][]) la liste de distance à référer
-        :param distanceIndexList: (int[][]) la liste d'indice de bâtiment à trier
-        :return: result: (float[][]) la liste de distance triée
-        :return: resultIndex: (int[][]) la liste d'indice de bâtiment triée
+        Description:
+            Cette méthode est pour trier une liste d'indice de bâtiments
+            en référant la matrice de distance avec le tri par fusion
+
+        :param distanceList: (float[]) la liste de distance à référer
+        :param distanceIndexList: (int[]) la liste d'indice de bâtiment à trier
+
+        :return: result: (float[]) la liste de distances triées
+        :return: resultIndex: (int[]) la liste d'indices de bâtiments triés
         '''
 
         # si la taille liste distanceList est 1 après la division, retourner les deux liste
@@ -442,8 +475,8 @@ class AlgorithmController:
 
         # respectivent diviser les deux liste en deux sous-liste
         num = int(len(distanceList) / 2)
-        left, leftIndex = self.merge_sort(distanceList[:num], distanceIndexList[:num])
-        right, rightIndex = self.merge_sort(distanceList[num:], distanceIndexList[num:])
+        left, leftIndex = self.mergeSort(distanceList[:num], distanceIndexList[:num])
+        right, rightIndex = self.mergeSort(distanceList[num:], distanceIndexList[num:])
 
         # faire le tri
         i, j = 0, 0
@@ -476,8 +509,11 @@ class AlgorithmController:
 
     def objectiveFunctionF(self, solution):
         '''
-        Description: cette méthode est pour réaliser la fonction objective f(x)
+        Description:
+            Cette méthode est pour réaliser la fonction objective f(x)
+
         :param solution: (l'object de la classe SolutionModel) une solution
+
         :return: fx: (float) la valeur calculée de f(x)
         '''
 
@@ -507,8 +543,11 @@ class AlgorithmController:
 
     def objectiveFunctionG(self, solution):
         '''
-        Description: cette méthode est pour réaliser la fonction objective g(x)
+        Description:
+            Cette méthode est pour réaliser la fonction objective g(x)
+
         :param solution: (l'object de la classe SolutionModel) une solution
+
         :return: gx: (float) la valeur calculée de g(x)
         '''
 
@@ -538,8 +577,11 @@ class AlgorithmController:
 
     def objectiveFunctionH(self, solution):
         '''
-        Description: cette méthode est pour réaliser la fonction objective h(x)
+        Description:
+            Cette méthode est pour réaliser la fonction objective h(x)
+
         :param solution: (l'object de la classe SolutionModel) une solution
+
         :return: h(x): (float) la valeur calculée de h(x)
         '''
 
@@ -569,10 +611,15 @@ class AlgorithmController:
 
     def calculateAverageSolutionQualityForEachIteration(self,qualityOfSolutionForOneIterationList):
         '''
-        Description: cette méthode est pour calculer la qualité moyenne des solutions générées par chaque fourmi dans une itération
+        Description:
+            Cette méthode est pour calculer la qualité moyenne des
+            solutions générées par chaque fourmi dans une itération
+
         :param qualityOfSolutionForOneIterationList: (float[]) la liste de qualités de chaque solution d'une itération
+
         :return: average: (float) la qualité moyenne des solutions
         '''
+
         sum = 0.00
         for k in range(len(self.instance.antList)):
             sum += qualityOfSolutionForOneIterationList[k]
@@ -580,10 +627,14 @@ class AlgorithmController:
 
         return average
 
+
     def calculateDistanceTotalOfOneSolution(self,oneSolution):
         '''
-        Description: cette méthode est pour calculer la distance totale d'une solution
-        :param bestSolutionOfOneIteration: (l'objet de la classe SolutionModel) une solution
+        Description:
+            Cette méthode est pour calculer la distance totale d'une solution
+
+        :param oneSolution: (l'objet de la classe SolutionModel) une solution
+
         :return: distanceTotal: (float) la distance totale calculée d'une solution
         '''
 
@@ -600,10 +651,14 @@ class AlgorithmController:
 
         return distanceTotal
 
+
     def calculatePopulationAllocatedOfOneSolution(self, oneSolution):
         '''
-        Description: cette méthode est pour calculer le nombre de sans-abris hébergés d'une solution
-        :param bestSolutionOfOneIteration: (l'objet de la classe SolutionModel) une solution
+        Description:
+            Cette méthode est pour calculer le nombre de sans-abris hébergés d'une solution
+
+        :param oneSolution: (l'objet de la classe SolutionModel) une solution
+
         :return: populationAllocated: (float) le nombre de sans-abris hébergés d'une solution
         '''
 
@@ -620,10 +675,14 @@ class AlgorithmController:
 
         return populationAllocated
 
+
     def calculateBuildingAllocatedOfOneSolution(self, oneSolution):
         '''
-        Description: cette méthode est pour calculer le nombre de bâtiments affectés d'une solution
-        :param bestSolutionOfOneIteration: (l'objet de la classe SolutionModel) une solution
+        Description:
+            Cette méthode est pour calculer le nombre de bâtiments affectés d'une solution
+
+        :param oneSolution: (l'objet de la classe SolutionModel) une solution
+
         :return: buildingAllocated: (int) le nombre de bâtiments affectés d'une solution
         '''
 

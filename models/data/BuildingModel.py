@@ -1,9 +1,19 @@
 #-*-coding:utf-8-*-
 
+'''
+Description:
+    Ce fichier est le script du modèle de bâtiment, qui est l'une instance de problème à résoudre
+
+Version: 1.0
+
+Auteur: Peng BI
+'''
 
 class BuildingModel:
     '''
-    Description: cette classe est le modèle de bâtiment
+    Description:
+        Cette classe est le modèle de bâtiment
+
     Attributs:
         idBuilding: (int) l'identifiant de bâtiment
         population: (float) le nombre de sans-abris dans le bâtiment
@@ -11,7 +21,8 @@ class BuildingModel:
 
     def __init__(self):
         '''
-        Description: cette méthode est le constructeur de la classe BuildingModel
+        Description:
+            Cette méthode est le constructeur de la classe BuildingModel
         '''
 
         self.idBuilding = 0 # (int) l'identifiant de bâtiment

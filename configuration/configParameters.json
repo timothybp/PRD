@@ -2,10 +2,20 @@
     "antQuantity": 50,
     "iterationTimes": 10,
     "careEffectRadius": 3000,
-    "buildingFileName": "files/Rq22_51760B_TriCrOID_TriNSACr4.txt",
-    "careFileName": "files/Rq33_187CareMoveID188.txt",
-    "distanceFileName": "files/LOD9679120_IdNet_NSACr3.txt",
-    "solutionFileName": "files/bestSolution.txt",
-    "qualityFileName": "files/quality.txt"
+    "inputFiles": {
+        "buildingFileName": "files/Rq22_51760B_TriCrOID_TriNSACr4.txt",
+        "careFileName": "files/Rq33_187CareMoveID188.txt",
+        "distanceFileName": "files/LOD9679120_IdNet_NSACr3.txt"
+    },
+    "outputFiles": {
+        "solutionFileName": "files/bestSolution.txt",
+        "qualityFileName": "files/quality.txt"
+    },
+    "pheromone": {
+        "rhoNode": 0.000001,
+        "tauNode": 0.8,
+        "rhoEdge": 0.1,
+        "tauEdge": 0.9
+    }
 }
 

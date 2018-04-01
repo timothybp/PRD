@@ -254,9 +254,6 @@ class ProfilerAlgorithmController:
                 # sinon( si la liste de candidat de care actuel est vide), il faut agrandir son rayon et reremplir sa
                 # liste de candidat
                 else:
-                    # le rayon de care actuel augmente 1000m
-                    radiusList[careToFillIndexOfLastStep] += 1000
-
                     # mettre à jour la liste d'indices de bâtiment par rapport à la matrice de distance pour le care actuel,
                     # enlever les bâtiments qui sont déjà affectés
                     sortedDistanceColumn = copyDistanceSortedBuildingIndexMatrix[careToFillIndexOfLastStep]
@@ -268,6 +265,14 @@ class ProfilerAlgorithmController:
                     originalDistanceColumn = [originalColumn[careToFillIndexOfLastStep] for originalColumn in
                                               self.instance.distanceMatrix]
                     sortedDistanceColumn = copyDistanceSortedBuildingIndexMatrix[careToFillIndexOfLastStep]
+
+                    # si la distance du premier bâtiment dans la liste d'indices de bâtiment triée dépasse le
+                    # rayon de care actuel, agrandir le rayon
+                    index = sortedDistanceColumn[0]
+                    if self.instance.distanceMatrix[index][careToFillIndexOfLastStep] > radiusList[careToFillIndexOfLastStep]:
+                        # le rayon de care actuel augmente 1000m
+                        radiusList[careToFillIndexOfLastStep] += 1000
+
                     # commencer à remplir la liste de candidat de care actuel
                     i = 0
                     while i < len(sortedDistanceColumn):

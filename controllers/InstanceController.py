@@ -29,29 +29,30 @@ class InstanceController:
 
     Attribut:
         instance: (l'objet de la classe InstanceModel) l'instance pour ce projet
+        configJson: (l'objet de JSON) les valeurs des paramètres configurées par l'utilisateur
     '''
 
-    def __init__(self):
+    def __init__(self, configJson):
         '''
         Description:
             Cette méthode est le constructeur de la classe InstanceController
         '''
 
         self.instance = InstanceModel() # (l'objet de la classe InstanceModel) l'instance pour ce projet
+        self.configJson = configJson # (l'objet de JSON) les valeurs des paramètres configurées par l'utilisateur
 
 
-    def constructInstance(self,antQuantity, buildingFileName,careFileName, distanceFileName):
+    def constructInstance(self):
         '''
         Description:
             Cette méthode est pour construire l'instance de projet
 
-        :param antQuantity: (int) le nombre de fourmis
-        :param buildingFileName: (String) le nom du fichier de bâtiment
-        :param careFileName: (String) le nom du fichier de care
-        :param distanceFileName: (String) le nom du fichier de distance
-
         :return: rien
         '''
+
+        buildingFileName = self.configJson["inputFiles"]["buildingFileName"]  # Le nom du fichier "bâtiment"
+        careFileName = self.configJson["inputFiles"]["careFileName"]  # Le nom du fichier "care"
+        distanceFileName = self.configJson["inputFiles"]["distanceFileName"]  # Le nom du fichier "distance"
 
         fileCtrl = FileController()
         print('Start to read files...')
@@ -79,8 +80,8 @@ class InstanceController:
             # pour la combinaison de F(x) et G(x), la valeur d'eta de phéromone sur les nœuds est égale à la population de bâtiments
             # pour la combinaison de F(x) et H(x), la valeur d'eta de phéromone sur les nœuds est égale à (1 / la population de bâtiments)
             pheromoneNode.eta = float(buildingLine.split('\t')[3])
-            pheromoneNode.rho = 0.000001
-            pheromoneNode.tau = 0.8
+            pheromoneNode.rho = self.configJson["pheromone"]["rhoNode"]
+            pheromoneNode.tau = self.configJson["pheromone"]["tauNode"]
             self.instance.pheromoneNodeList.append(pheromoneNode)
 
         # construire la liste de care
@@ -105,8 +106,8 @@ class InstanceController:
             # sinon, la valeur d'eta de phéromone sur les arcs est égale à 0
             else:
                 pheromoneEdge.eta = 0
-            pheromoneEdge.rho = 0.1
-            pheromoneEdge.tau = 0.9
+            pheromoneEdge.rho = self.configJson["pheromone"]["rhoEdge"]
+            pheromoneEdge.tau = self.configJson["pheromone"]["tauEdge"]
             self.instance.pheromoneEdgeMatrix[i].append(pheromoneEdge)
             j += 1
 
@@ -118,7 +119,7 @@ class InstanceController:
 
         # construire la liste de fourmis
         k = 0
-        while(k < antQuantity):
+        while(k < self.configJson["antQuantity"]):
             ant = AntModel()
             self.instance.antList.append(ant)
             k += 1
@@ -127,26 +128,18 @@ class InstanceController:
         print('Finish constructing the instance, it takes %d s!\n\n' % (constructInstanceEndTime - constructInstanceStartTime))
 
 
-    def solveProblem(self,iterationTimes, careEffectRadius, solutionFileName, qualityFileName):
+    def solveProblem(self):
         '''
         Description:
             Cette méthode fournit la service de résoudre le problème
 
-        :param iterationTimes: (int) la fois d'itération
-        :param careEffectRadius: (int) le rayon d'attraction initial pour les cares
-        :param solutionFileName: （String) le nom du fichier de solution qui enregistre la meilleure solution à la fin
-        :param qualityFileName: (String) le nom du fichier de qualités qui contient les qualités des meilleures
-                                 solutions de chaque itération et les qualités moyennes des solutions de chaque
-                                 itération, la distance totale et le nombre de sans-abris hébergés ainsi que le
-                                 nombre de bâtiments affectés de chaque itération
-
         :return: rien
         '''
 
-        algorithmCtrl = AlgorithmController(self.instance,careEffectRadius)
+        algorithmCtrl = AlgorithmController(self.instance,self.configJson["careEffectRadius"])
 
         # appeler la méthode "run()" de la classe AlgorithmController pour commencer à résoudre le problème
-        algorithmCtrl.run(iterationTimes)
+        algorithmCtrl.run(self.configJson["iterationTimes"])
 
         # obtenir la meilleure solution
         bestSolution = algorithmCtrl.bestSolution
@@ -163,9 +156,10 @@ class InstanceController:
 
         fileCtrl = FileController()
         # écrire la meilleure solution dans le fichier de solution
-        fileCtrl.writeSolutionFile(solutionFileName, bestSolution, self.instance)
+        fileCtrl.writeSolutionFile(self.configJson["outputFiles"]["solutionFileName"], bestSolution, self.instance)
         # écrire les quantités des meiileures solutions et les quantités moyennes des solutions de chaque itération
         # dans le fichier de qualité
-        fileCtrl.writeQualityFile(qualityFileName, bestQualityOfSolutionForEachIterationList, averageQualityOfSolutionForEachIterationList,
-                                  distanceTotalOfBestSolutionForEachIterationList, populationAllocatedOfBestSolutionForEachIterationList,
+        fileCtrl.writeQualityFile(self.configJson["outputFiles"]["qualityFileName"], bestQualityOfSolutionForEachIterationList,
+                                  averageQualityOfSolutionForEachIterationList,distanceTotalOfBestSolutionForEachIterationList,
+                                  populationAllocatedOfBestSolutionForEachIterationList,
                                   buildingAllocatedOfBestSolutionForEachIterationList)

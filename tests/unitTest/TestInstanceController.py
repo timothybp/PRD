@@ -10,7 +10,7 @@ Auteur: Peng BI
 '''
 
 import unittest
-
+import json
 from controllers.InstanceController import InstanceController
 from models.antAlgorithm.AntModel import AntModel
 from models.antAlgorithm.PheromoneEdge import PheromoneEdge
@@ -28,6 +28,41 @@ class TestInstanceController(unittest.TestCase):
     Attribut; rien
     '''
 
+    def build_configurationJson(self):
+        '''
+        Description:
+            Cette méthode est pour construire un objet de JSON qui contient
+            toutes les valeurs de paramètres dont le programme a besoin
+
+        :return: configJson: (l'objet de JSON) les valeurs des paramètres
+        '''
+
+        configJson = json.loads('{'
+                                    '"antQuantity": 10,'
+                                    '"iterationTimes": 200,'
+                                    '"careEffectRadius": 3000,'
+                                    '"inputFiles":'
+                                    '{'
+                                        '"buildingFileName": "../../files/Rq22_51760B_TriCrOID_TriNSACr4.txt",'
+                                        '"careFileName": "../../files/Rq33_187CareMoveID188.txt",'
+                                        '"distanceFileName": "../../files/LOD9679120_IdNet_NSACr3.txt"'
+                                    '},'
+                                    '"outputFiles": {'
+                                        '"solutionFileName": "../../files/bestSolution.txt",'
+                                        '"qualityFileName": "../../files/quality.txt"'
+                                    '},'
+                                    '"pheromone": '
+                                    '{'
+                                        '"rhoNode": 0.000001,'
+                                        '"tauNode": 0.8,'
+                                        '"rhoEdge": 0.1, '
+                                        '"tauEdge": 0.9'
+                                    '}'
+                                '}')
+
+        return configJson
+
+
     def test_constructInstance(self):
         '''
         Description:
@@ -37,14 +72,10 @@ class TestInstanceController(unittest.TestCase):
         :return: rien
         '''
 
-        # définir le nombre de fourmis est 10
-        antQuantity = 10
-        buildingFileName = '../../files/Rq22_51760B_TriCrOID_TriNSACr4.txt'
-        careFileName = '../../files/Rq33_187CareMoveID188.txt'
-        distanceFileName = '../../files/LOD9679120_IdNet_NSACr3.txt'
+        configJson = self.build_configurationJson()
 
-        ic = InstanceController()
-        ic.constructInstance(antQuantity, buildingFileName, careFileName, distanceFileName)
+        ic = InstanceController(configJson)
+        ic.constructInstance()
 
         # vérifier si le nombre de battements est 50 et le nombre de cares est 20 et
         # si la taille de la première dimension de la matrice de distance est 50 et
@@ -124,11 +155,13 @@ class TestInstanceController(unittest.TestCase):
         # construire les fourmis
         instance.antList = [AntModel(), AntModel(), AntModel(), AntModel(), AntModel()]
 
-        ic = InstanceController()
+        configJson = self.build_configurationJson()
+
+        ic = InstanceController(configJson)
         ic.instance = instance
 
         # le nombre d'itérations est 200 et le rayon initial d'attraction de care est 3000m
-        ic.solveProblem(200, 3000, "../../files/bestSolution_test.txt", "../../files/quality_test.txt")
+        ic.solveProblem()
 
 
 if __name__ == '__main__':

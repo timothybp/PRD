@@ -86,9 +86,8 @@ class TestFileController(unittest.TestCase):
 
         # vérifier si toutes les paramètres de besoin sont bien lues du fichier de configuraton
         self.assertTrue('antQuantity' in configJson.keys() and 'iterationTimes'in configJson.keys() and
-                        'careEffectRadius' in configJson.keys() and 'buildingFileName' in configJson.keys() and
-                        'careFileName' in configJson.keys() and 'distanceFileName' in configJson.keys() and
-                        'solutionFileName' in configJson.keys() and 'qualityFileName' in configJson.keys())
+                        'careEffectRadius' in configJson.keys() and 'inputFiles' in configJson.keys() and
+                        'outputFiles' in configJson.keys() and 'pheromone' in configJson.keys())
 
 
     def test_writeSolutionFile(self):

@@ -24,25 +24,15 @@ if __name__ == '__main__':
     # lire les configuration des paramètres pour le problème du fichier "configParameters.json"
     fileCtrl = FileController()
     configJson = fileCtrl.readConfigurationFile(configFileName)
-    antQuantity = int(configJson["antQuantity"]) # Le nombre de fourmis est de 50
-    iterationTimes = int(configJson["iterationTimes"])  # La fois d'itération est de 1000
-    careEffectRadius = int(configJson["careEffectRadius"]) # Le rayon d'effect initial de chaque care est de 3000m
 
-    buildingFileName = configJson["buildingFileName"] # Le nom du fichier "bâtiment"
-    careFileName = configJson["careFileName"]   # Le nom du fichier "care"
-    distanceFileName = configJson["distanceFileName"]  # Le nom du fichier "distance"
-
-    instanceCtrl = InstanceController()
+    instanceCtrl = InstanceController(configJson)
     # Appeler la méthode "constructInstance()" pour construire l'instance de programme
-    instanceCtrl.constructInstance(antQuantity, buildingFileName,careFileName, distanceFileName)
+    instanceCtrl.constructInstance()
 
     print('Start to solve the problem...')
-    solutionFileName = configJson["solutionFileName"] # Le nom du fichier qui stocke la meilleur solution à la fin d'exécution
-    qualityFileName = configJson["qualityFileName"]  # Le nom du fichier qui stocke les qualités de meilleures solutions et les
-                                                       #  qualités moyenne de solutions de chaque itération à la fin d'exécution
     solveProblemeStartTime = time.time()
     # Appeler la méthode "solveProblem()" de la classe InstanceController pour demander la service de résolution de problème
-    instanceCtrl.solveProblem(iterationTimes, careEffectRadius, solutionFileName,qualityFileName)
+    instanceCtrl.solveProblem()
     solveProblemeEndTime = time.time()
     print('Finish solving the problem, it takes %d s!\n\n' % (solveProblemeEndTime - solveProblemeStartTime))
 

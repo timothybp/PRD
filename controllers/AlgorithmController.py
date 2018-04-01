@@ -28,7 +28,7 @@ class AlgorithmController:
         bestSolution: (l'objet de la classe SolutionModel) la meilleure solution trouvé finalement
         careEffectRadius: (int) le rayon d'attraction initial de cercle dont le centre est chaque care
         bestQualityOfSolutionForEachIterationList: (float[]) la liste de qualités de meilleure solution de chaque itération
-        averageQualityOfSolutionForEachIterationList: (float[]) la liste de qualités moyenne des soltuons de chaque itération
+        averageQualityOfSolutionForEachIterationList: (float[]) la liste de qualités moyenne des solutions de chaque itération
         distanceTotalOfBestSolutionForEachIterationList: (float[]) la liste de distance totale de la meilleure solution de chaque itération
         populationAllocatedOfBestSolutionForEachIterationList: (float[]) la liste de sans-abris totaux hébergés de la meilleure solution de chaque itération
         buildingAllocatedOfBestSolutionForEachIterationList: (float[]) la liste de nombre de bâtiments affectés de la meilleure solution de chaque itération
@@ -47,9 +47,9 @@ class AlgorithmController:
 
         self.instance = instance    # (l'objet de la classe InstanceModel) l'instance préparée par la classe InstanceControleur
         self.bestSolution = SolutionModel() # (l'objet de la classe SolutionModel) la meilleure solution trouvé finalement
-        self.careEffectRadius = careEffectRadius    # (int) le rayon d'attraction initial de circle dont le centre est chaque care
+        self.careEffectRadius = careEffectRadius    # (int) le rayon d'attraction initial de cercle dont le centre est chaque care
         self.bestQualityOfSolutionForEachIterationList = []  # (float[]) la liste de qualités de meilleure solution de chaque itération
-        self.averageQualityOfSolutionForEachIterationList = []  # (float[]) la liste de qualités moyenne des soltuons de chaque itération
+        self.averageQualityOfSolutionForEachIterationList = []  # (float[]) la liste de qualités moyenne des solutions de chaque itération
         self.distanceTotalOfBestSolutionForEachIterationList = []  # (float[]) la liste de distance totale de la meilleure solution de chaque itération
         self.populationAllocatedOfBestSolutionForEachIterationList = []  # (float[]) la liste de sans-abris totaux hébergés de la meilleure solution de chaque itération
         self.buildingAllocatedOfBestSolutionForEachIterationList = []  # (float[]) la liste de nombre de bâtiments affectés de la meilleure solution de chaque itération
@@ -58,7 +58,7 @@ class AlgorithmController:
     def run(self, iterationTimes):
         '''
         Description:
-            Cette méthode est l'entrée de l'algorithme, et synthétise les solutions générée
+            Cette méthode est l'entrée de l'algorithme, et synthétise les solutions générées
             par chaque fourmi dans chaque itération, et obtenir la meilleure solution
 
         :param iterationTimes: (int) la fois d'itérations
@@ -94,9 +94,9 @@ class AlgorithmController:
 
             # (Solution) chercher la meilleure solution parmis les solutions generèe par chaque fourmi dans une itération
             bestSolutionIndexForOneIteration = qualityOfSolutionForOneIterationList.index(max(qualityOfSolutionForOneIterationList))
-            # ajouter la qualité de meilleure solution trouvée dans l'itération actuelle dans la liste "bestQualityOfSolutionForEachIterationList"
+            # ajouter la qualité de meilleure solution de l'itération actuelle dans la liste "bestQualityOfSolutionForEachIterationList"
             self.bestQualityOfSolutionForEachIterationList.append(max(qualityOfSolutionForOneIterationList))
-            # ajouter la meilleure solution trouvée dans l'itération actuelle dans la liste ＂bestSolutionForEachIterationList＂
+            # ajouter la meilleure solution de l'itération actuelle dans la liste ＂bestSolutionForEachIterationList＂
             bestSolutionForEachIterationList.append(solutionForOneIterationList[bestSolutionIndexForOneIteration])
             # calculer la qualité moyenne de solutions dans l'itération actuelle en appelant la méthode
             # "self.calculateAverageSolutionQualityForEachIteration", et l'ajouter dans la liste "averageQualityOfSolutionForEachIterationList"
@@ -127,9 +127,9 @@ class AlgorithmController:
         Description:
             Cette méthode est pour sélectionner les bâtiments à affecter
 
-        :param ant: (l'objet de la classe AntModel) un fourmi qui va chercher sa solution
+        :param ant: (l'objet de la classe AntModel) une fourmi qui va chercher sa solution
         :param copyDistanceSortedBuildingIndexMatrix: (int[][]) la matrice copiée d'indices
-                                                       de bâtiment référée la matrice de distance
+                                                       de bâtiment référant la matrice de distance
         :param solutionForOneIterationList: (SolutionModel[]) la liste de solutions pour une itération
         :param qualityOfSolutionForOneIterationList: (float[]) la liste de qualités de solution pour une itération
 
@@ -141,9 +141,9 @@ class AlgorithmController:
         buildingToAllocateList = copy.deepcopy(self.instance.buildingList)  # (BuildingModel[]) la liste de bâtiments
         careToFillList = copy.deepcopy(self.instance.careList)  # (CareModel[]) la liste de care
 
-        # (Boolean[]) la liste qui sert à marquer si le bâtiment est déjà affectè，les valeurs initiales sont "False"
+        # (Boolean[]) la liste qui marque si le bâtiment est déjà affecté，les valeurs initiales sont "False"
         isBuildingSelectedList = [False] * len(buildingToAllocateList)
-        # (Boolean[]) la liste qui sert à marquer si le care est déjà plein, les valeurs initiales sont "False"
+        # (Boolean[]) la liste qui marque si le care est déjà plein, les valeurs initiales sont "False"
         isCareFullList = [False] * len(careToFillList)
         # (int[]) la liste de rayon d'attraction de care, les valeurs initiales sont égales au rayon initiale
         radiusList = [self.careEffectRadius] * len(careToFillList)
@@ -203,7 +203,7 @@ class AlgorithmController:
             else:
                 # si la liste de candidat du care n'est pas vide
                 if len(candidateListForCare[careToFillIndexOfLastStep]) != 0:
-                    buildingProbabilityList = []    # la liste de probabilité de transition de chaque bâtiment
+                    buildingProbabilityList = []    # la liste de probabilité de déplacement de chaque bâtiment
                     buildingIndexForProbabilityList = []    # la liste d'indices de bâtiment qui correspond à la liste buildingProbabilityList
 
                     print("batiment *******************************************")
@@ -332,7 +332,7 @@ class AlgorithmController:
         :param careToFillList: (CareModel[]) la liste de care
         :param isCareFullList: (Boolean[]) la liste qui marque si le care est plein
         :param solution: (l'objet de la classe SolutionModel) la solution
-        :return: (boolean) une variable booléen qui signifie si tous les cares sont pleins
+        :return: (boolean) une variable booléenne qui signifie si tous les cares sont pleins
 
         :return: careToFillIndex: (int) l'indice de care sélectionné
         '''
@@ -340,7 +340,7 @@ class AlgorithmController:
         careProbabilityList = []    # la liste de probabilité de déplacement  de chaque care
         careIndexForProbabilityList = []    # la liste d'indices de bâtiment qui correspond à la liste careProbabilityList
 
-        allowedCareLenght = len(careToFillList) # (int) le nombre de cares qui sont encore dispobibles
+        allowedCareLenght = len(careToFillList) # (int) le nombre de cares qui sont encore disponibles
 
         probabilityCtrl = ProbabilityController()
 
@@ -378,7 +378,6 @@ class AlgorithmController:
 
             # mettre à jour la capacité de care sélectionné
             careToFillList[careToFillIndex].capacity = careToFillList[careToFillIndex].capacity - buildingToAllocateList[buidlingToAllocateIndex].population
-            print(careToFillIndex, buidlingToAllocateIndex, careToFillList[careToFillIndex].capacity)
             # vérifier si la capacité de care sélectionné est plein
             # i.e. si sa capacité peut héberger le bâtiment dont la population est minimum
             populationList = []
@@ -396,7 +395,7 @@ class AlgorithmController:
                 return True, careToFillIndex
             # sinon, il reste des bâtiments non-affectés
             else:
-                # chercher la population minumum
+                # chercher la population minimum
                 minPopulation = min(populationList)
                 # si la capacité de care sélectionné est inférieur à la population minimum
                 if careToFillList[careToFillIndex].capacity < minPopulation:
@@ -409,10 +408,10 @@ class AlgorithmController:
             # mettre l'indice de care pour ce bâtiment en -1
             careToFillIndex = -1
 
-        # si le nombre de cares diponible est de 0, tous les care sont plein
+        # si le nombre de cares disponible est de 0, tous les cares sont pleins
         if allowedCareLenght == 0:
             return True,careToFillIndex
-        # sinon, il reste des cares disponbles
+        # sinon, il reste des cares disponibles
         else:
             return False,careToFillIndex
 

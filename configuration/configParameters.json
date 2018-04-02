@@ -1,6 +1,6 @@
 {
     "antQuantity": 50,
-    "iterationTimes": 10,
+    "iterationTimes": 100,
     "careEffectRadius": 3000,
     "inputFiles": {
         "buildingFileName": "files/Rq22_51760B_TriCrOID_TriNSACr4.txt",
@@ -18,4 +18,3 @@
         "tauEdge": 0.9
     }
 }
-

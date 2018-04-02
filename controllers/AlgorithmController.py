@@ -195,10 +195,16 @@ class AlgorithmController:
         print('Start to allocate buildings...')
         step = 0
         careToFillIndexOfLastStep = -1  # (int) l'indice de care qui est sélectionné dans le pas précédent
+        # une liste qui stocke juste l'indece de bâtiment, elle sert à sélectionner un bâtiment au hasard
+        # (par contre la liste "buidlingToAllocateIndex" stocke l'id de bâtiment)
+        buildingIndexList = [index for index in range(0,len(buildingToAllocateList))]
         while step < len(buildingToAllocateList):
-            # si c'est le premier pas ou aucun care est sélectionné dans le pas précédent, sélectionner un bâtiment au hasard
+            # si c'est le premier pas ou aucun care est sélectionné dans le
+            # pas précédent, sélectionner un bâtiment non-affecté au hasard
             if step == 0 or careToFillIndexOfLastStep == -1:
-                buidlingToAllocateIndex = random.randint(0, len(buildingToAllocateList) - 1)
+                randomNumber = random.randint(0, len(buildingIndexList) - 1)
+                buidlingToAllocateIndex = buildingIndexList[randomNumber]
+                buildingIndexList.remove(buidlingToAllocateIndex)
             # sinon, il faut calculer la probabilité de transition de bâtiment pour sélectionner un bâtiment
             else:
                 # si la liste de candidat du care n'est pas vide
@@ -240,6 +246,7 @@ class AlgorithmController:
                     # selon leurs probabilités de déplacement
                     buidlingToAllocateIndex = probabilityCtrl.generateProbability(buildingIndexForProbabilityList,
                                                                                   buildingProbabilityList)
+                    buildingIndexList.remove(buidlingToAllocateIndex)
                     # enlever le bâtiment［buidlingToAllocateIndex］ de la liste de candidat de care actuel
                     candidateListForCare[careToFillIndexOfLastStep].remove(buidlingToAllocateIndex)
                     print("batiment end")
